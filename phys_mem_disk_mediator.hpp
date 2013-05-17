@@ -87,7 +87,12 @@ namespace phys{
 
             // Rekursion für alle ChildChilds der Typeliste
             typedef typename TYPE_for_child::TYPELIST_childs TYPELIST_childs_ofChild_T;
-            static constexpr int child_typelist_size(std::tuple_size<TYPELIST_childs_ofChild_T>::value);
+        //! ADD enum - monotomy 17 of may
+        //static constexpr int child_typelist_size(std::tuple_size<TYPELIST_childs_ofChild_T>::value);
+            enum : int
+            {
+                child_typelist_size = std::tuple_size<TYPELIST_childs_ofChild_T>::value
+            };            
             // ChildChilds auffordern daten seines childs zu schreiben
             exec_read_child_child_properties_from_db_2(db__,
                                                        (*childs_in_object),
@@ -175,7 +180,12 @@ namespace phys{
 
             // Rekursion für alle ChildChilds der Typeliste
             typedef typename TYPE_for_child::TYPELIST_childs TYPELIST_childs_ofChild_T;
-            static constexpr int child_typelist_size(std::tuple_size<TYPELIST_childs_ofChild_T>::value);
+        //! ADD enum - monotomy 17 of may
+        //static constexpr int child_typelist_size(std::tuple_size<TYPELIST_childs_ofChild_T>::value);
+            enum : int
+            {
+                child_typelist_size = std::tuple_size<TYPELIST_childs_ofChild_T>::value
+            };        
 
             // ChildChilds auffordern Properties ihrer childs zu schreiben
             exec_write_child_child_properties_2_db_from(db__,
