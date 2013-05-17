@@ -8,7 +8,7 @@ web: www.cythar.sequenzer.org
 
 LICENCE
 
-This plugins are licensed under the GNU GPL version 3. See the file COPYING for details.
+This software are licensed under the GNU GPL version 3. See the file COPYING for details.
 
 
 NOTES
