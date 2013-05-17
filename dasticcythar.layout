@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<ActiveTarget name="l64_jack_dbug" />
+	<File name="3th_party/rtmidi-2.0.1/RtMidi.cpp" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="110522" topLine="3398" />
+		</Cursor>
+	</File>
+	<File name="dc_midi_sequencer_timer.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="14857" topLine="404" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>

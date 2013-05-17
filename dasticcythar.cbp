@@ -1,0 +1,2568 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="dasticcythar" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="l64_alsa">
+				<Option platforms="Unix;" />
+				<Option output="bin/cythar-alsa$(#set_64_version)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/64_alsa" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-isystem/usr/include" />
+					<Add option="-isystem/usr/include/QtCore" />
+					<Add option="-isystem/usr/include/QtGui" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-m64" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__LINUX_ALSA__" />
+					<Add option="-D__UNIX__" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-lpthread" />
+					<Add option="-lasound" />
+					<Add option="-ldl" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add directory="/lib64" />
+					<Add directory="/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="l64_jack">
+				<Option platforms="Unix;" />
+				<Option output="bin/cythar-jack$(#set_64_version)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/64_jack" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-isystem/usr/include" />
+					<Add option="-isystem/usr/include/QtCore" />
+					<Add option="-isystem/usr/include/QtGui" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-m64" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-D__UNIX_JACK__" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-ljack" />
+					<Add option="-ldl" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add directory="/lib64" />
+					<Add directory="/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="l32_alsa">
+				<Option platforms="Unix;Mac;" />
+				<Option output="bin/cythar-alsa$(#set_32_version)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/32_alsa" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-m32" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__LINUX_ALSA__" />
+					<Add option="-D__UNIX__" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-lpthread" />
+					<Add option="-lasound" />
+					<Add option="-ldl" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add directory="/lib" />
+					<Add directory="/usr/lib" />
+				</Linker>
+			</Target>
+			<Target title="l32_jack">
+				<Option platforms="Unix;" />
+				<Option output="bin/cythar-jack$(#set_32_version)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/32_jack" />
+				<Option type="0" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-m32" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-D__UNIX_JACK__" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m32" />
+					<Add option="-ljack" />
+					<Add option="-ldl" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add directory="/lib" />
+					<Add directory="/usr/lib" />
+				</Linker>
+			</Target>
+			<Target title="w64_winmm">
+				<Option platforms="Windows;Unix;" />
+				<Option output="bin/cythar-wmm$(#set_64_version_exe)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/win/64_winmm" />
+				<Option type="0" />
+				<Option compiler="mingw32_compiler_---_x86_64-w64-mingw32" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-m64" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__WINDOWS_MM__" />
+					<Add option="-D__WIN__" />
+					<Add option="-DBOOST_THREAD_USE_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lboost_thread-gcc47-mt-1_48" />
+					<Add option="-lboost_system-gcc47-mt-1_48" />
+					<Add option="-lboost_chrono-gcc47-mt-1_48" />
+					<Add option="-lwinmm" />
+					<Add library="libQtGui4" />
+					<Add library="libQtCore4" />
+				</Linker>
+			</Target>
+			<Target title="w64_ks">
+				<Option platforms="Windows;Unix;" />
+				<Option output="bin/cythar-ks$(#set_64_version_exe)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/win/64_ks" />
+				<Option type="0" />
+				<Option compiler="mingw32_compiler_---_x86_64-w64-mingw32" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-m64" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__WINDOWS_KS__" />
+					<Add option="-D__WIN__" />
+					<Add option="-DBOOST_THREAD_USE_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lboost_thread-gcc47-mt-1_48" />
+					<Add option="-lboost_system-gcc47-mt-1_48" />
+					<Add option="-lboost_chrono-gcc47-mt-1_48" />
+					<Add option="-lsetupapi" />
+					<Add option="-lksuser" />
+					<Add library="libQtGui4" />
+					<Add library="libQtCore4" />
+				</Linker>
+			</Target>
+			<Target title="w32_winmm">
+				<Option platforms="Windows;Unix;" />
+				<Option output="bin/cythar-wmm$(#set_32_version_exe)" prefix_auto="0" extension_auto="0" />
+				<Option working_dir="bin" />
+				<Option object_output="obj/win/32_winmm" />
+				<Option type="0" />
+				<Option compiler="mingw32_compiler__i686w64mingw32" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-m32" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__WINDOWS_MM__" />
+					<Add option="-D__WIN__" />
+					<Add option="-DBOOST_THREAD_USE_LIB" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lboost_thread-gcc47-mt-1_48" />
+					<Add option="-lboost_system-gcc47-mt-1_48" />
+					<Add option="-lboost_chrono-gcc47-mt-1_48" />
+					<Add option="-lwinmm" />
+					<Add library="libQtGui4" />
+					<Add library="libQtCore4" />
+				</Linker>
+			</Target>
+			<Target title="w32_ks">
+				<Option platforms="Windows;Unix;" />
+				<Option output="bin/cythar-ks$(#set_32_version_exe)" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/win/32_ks" />
+				<Option type="0" />
+				<Option compiler="mingw32_compiler__i686w64mingw32" />
+				<Option projectLinkerOptionsRelation="1" />
+				<Option projectResourceIncludeDirsRelation="1" />
+				<Option projectLibDirsRelation="1" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-m32" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__WINDOWS_KS__" />
+					<Add option="-D__WIN__" />
+					<Add option="-DBOOST_THREAD_USE_LIB" />
+					<Add option="-DDEBUG" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-lboost_thread-gcc47-mt-1_48" />
+					<Add option="-lboost_system-gcc47-mt-1_48" />
+					<Add option="-lboost_chrono-gcc47-mt-1_48" />
+					<Add option="-lsetupapi" />
+					<Add option="-lksuser" />
+					<Add library="libQtGui4" />
+					<Add library="libQtCore4" />
+				</Linker>
+			</Target>
+			<Target title="mac_ppc">
+				<Option platforms="Unix;Mac;" />
+				<Option output="bin/mac/ppc/cythar-core" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/mac/ppc_core" />
+				<Option type="5" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-std=c++0x" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-D__MACOSX_CORE__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-D__MAC__" />
+					<Add directory="uiced" />
+					<Add directory="/opt/local/Library/Frameworks/QtCore.framework/Versions/4/Headers" />
+					<Add directory="/opt/local/Library/Frameworks/QtGui.framework/Versions/4/Headers" />
+					<Add directory="/opt/local/include/Qt" />
+					<Add directory="/opt/local/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-framework CoreMIDI" />
+					<Add option="-framework CoreAudio" />
+					<Add option="-framework CoreFoundation" />
+					<Add option="-lQtGui" />
+					<Add option="-lQtCore" />
+					<Add directory="/opt/local/lib" />
+				</Linker>
+			</Target>
+			<Target title="mac_i386">
+				<Option platforms="Unix;Mac;" />
+				<Option output="bin/mac/i386/cythar-core" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/mac/i386_core" />
+				<Option type="5" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-std=c++0x" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-fauto-inc-dec" />
+					<Add option="-fcompare-elim" />
+					<Add option="-fcprop-registers" />
+					<Add option="-fdce" />
+					<Add option="-fdefer-pop" />
+					<Add option="-fdelayed-branch" />
+					<Add option="-fdse" />
+					<Add option="-fguess-branch-probability" />
+					<Add option="-fif-conversion2" />
+					<Add option="-fif-conversion" />
+					<Add option="-fipa-pure-const" />
+					<Add option="-fipa-profile" />
+					<Add option="-fipa-reference" />
+					<Add option="-fmerge-constants" />
+					<Add option="-fsplit-wide-types" />
+					<Add option="-ftree-bit-ccp" />
+					<Add option="-ftree-builtin-call-dce" />
+					<Add option="-ftree-ccp" />
+					<Add option="-ftree-ch" />
+					<Add option="-ftree-copyrename" />
+					<Add option="-ftree-dce" />
+					<Add option="-ftree-dominator-opts" />
+					<Add option="-ftree-dse" />
+					<Add option="-ftree-forwprop" />
+					<Add option="-ftree-fre" />
+					<Add option="-ftree-phiprop" />
+					<Add option="-ftree-slsr" />
+					<Add option="-ftree-sra" />
+					<Add option="-ftree-pta" />
+					<Add option="-ftree-ter" />
+					<Add option="-funit-at-a-time" />
+					<Add option="-fthread-jumps" />
+					<Add option="-falign-functions" />
+					<Add option="-falign-jumps" />
+					<Add option="-falign-loops" />
+					<Add option="-falign-labels" />
+					<Add option="-fcaller-saves" />
+					<Add option="-fcrossjumping" />
+					<Add option="-fcse-follow-jumps" />
+					<Add option="-fcse-skip-blocks" />
+					<Add option="-fdelete-null-pointer-checks" />
+					<Add option="-fdevirtualize" />
+					<Add option="-fgcse  -fgcse-lm" />
+					<Add option="-fhoist-adjacent-loads" />
+					<Add option="-finline-small-functions" />
+					<Add option="-findirect-inlining" />
+					<Add option="-fipa-sra" />
+					<Add option="-foptimize-sibling-calls" />
+					<Add option="-fpartial-inlining" />
+					<Add option="-fpeephole2" />
+					<Add option="-fregmove" />
+					<Add option="-freorder-blocks" />
+					<Add option="-freorder-functions" />
+					<Add option="-frerun-cse-after-loop" />
+					<Add option="-fsched-interblock" />
+					<Add option="-fsched-spec" />
+					<Add option="-fschedule-insns" />
+					<Add option="-fschedule-insns2" />
+					<Add option="-fstrict-aliasing" />
+					<Add option="-fstrict-overflow" />
+					<Add option="-ftree-switch-conversion" />
+					<Add option="-ftree-tail-merge" />
+					<Add option="-ftree-pre" />
+					<Add option="-ftree-vrp" />
+					<Add option="-finline-functions" />
+					<Add option="-funswitch-loops" />
+					<Add option="-fpredictive-commoning" />
+					<Add option="-fgcse-after-reload" />
+					<Add option="-ftree-vectorize" />
+					<Add option="-fvect-cost-model" />
+					<Add option="-ftree-partial-pre" />
+					<Add option="-fipa-cp-clone" />
+					<Add option="-D__MACOSX_CORE__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-D__MAC__" />
+					<Add directory="uiced" />
+					<Add directory="/opt/local/Library/Frameworks/QtCore.framework/Versions/4/Headers" />
+					<Add directory="/opt/local/Library/Frameworks/QtGui.framework/Versions/4/Headers" />
+					<Add directory="/opt/local/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-framework CoreMIDI" />
+					<Add option="-framework CoreAudio" />
+					<Add option="-framework CoreFoundation" />
+					<Add option="-lQtCore" />
+					<Add option="-lQtGui" />
+					<Add directory="/opt/local/lib" />
+					<Add directory="/opt/local/lib/gcc48" />
+				</Linker>
+			</Target>
+			<Target title="mac_x86_64">
+				<Option platforms="Unix;Mac;" />
+				<Option output="bin/mac/x86_64/cythar-core" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="obj/mac/x86_64_core" />
+				<Option type="5" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-std=c++0x" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-fauto-inc-dec" />
+					<Add option="-fcompare-elim" />
+					<Add option="-fcprop-registers" />
+					<Add option="-fdce" />
+					<Add option="-fdefer-pop" />
+					<Add option="-fdelayed-branch" />
+					<Add option="-fdse" />
+					<Add option="-fguess-branch-probability" />
+					<Add option="-fif-conversion2" />
+					<Add option="-fif-conversion" />
+					<Add option="-fipa-pure-const" />
+					<Add option="-fipa-profile" />
+					<Add option="-fipa-reference" />
+					<Add option="-fmerge-constants" />
+					<Add option="-fsplit-wide-types" />
+					<Add option="-ftree-bit-ccp" />
+					<Add option="-ftree-builtin-call-dce" />
+					<Add option="-ftree-ccp" />
+					<Add option="-ftree-ch" />
+					<Add option="-ftree-copyrename" />
+					<Add option="-ftree-dce" />
+					<Add option="-ftree-dominator-opts" />
+					<Add option="-ftree-dse" />
+					<Add option="-ftree-forwprop" />
+					<Add option="-ftree-fre" />
+					<Add option="-ftree-phiprop" />
+					<Add option="-ftree-slsr" />
+					<Add option="-ftree-sra" />
+					<Add option="-ftree-pta" />
+					<Add option="-ftree-ter" />
+					<Add option="-funit-at-a-time" />
+					<Add option="-fthread-jumps" />
+					<Add option="-falign-functions" />
+					<Add option="-falign-jumps" />
+					<Add option="-falign-loops" />
+					<Add option="-falign-labels" />
+					<Add option="-fcaller-saves" />
+					<Add option="-fcrossjumping" />
+					<Add option="-fcse-follow-jumps" />
+					<Add option="-fcse-skip-blocks" />
+					<Add option="-fdelete-null-pointer-checks" />
+					<Add option="-fdevirtualize" />
+					<Add option="-fgcse  -fgcse-lm" />
+					<Add option="-fhoist-adjacent-loads" />
+					<Add option="-finline-small-functions" />
+					<Add option="-findirect-inlining" />
+					<Add option="-fipa-sra" />
+					<Add option="-foptimize-sibling-calls" />
+					<Add option="-fpartial-inlining" />
+					<Add option="-fpeephole2" />
+					<Add option="-fregmove" />
+					<Add option="-freorder-blocks" />
+					<Add option="-freorder-functions" />
+					<Add option="-frerun-cse-after-loop" />
+					<Add option="-fsched-interblock" />
+					<Add option="-fsched-spec" />
+					<Add option="-fschedule-insns" />
+					<Add option="-fschedule-insns2" />
+					<Add option="-fstrict-aliasing" />
+					<Add option="-fstrict-overflow" />
+					<Add option="-ftree-switch-conversion" />
+					<Add option="-ftree-tail-merge" />
+					<Add option="-ftree-pre" />
+					<Add option="-ftree-vrp" />
+					<Add option="-finline-functions" />
+					<Add option="-funswitch-loops" />
+					<Add option="-fpredictive-commoning" />
+					<Add option="-fgcse-after-reload" />
+					<Add option="-ftree-vectorize" />
+					<Add option="-fvect-cost-model" />
+					<Add option="-ftree-partial-pre" />
+					<Add option="-fipa-cp-clone" />
+					<Add option="-D__MACOSX_CORE__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-D__MAC__" />
+					<Add directory="uiced" />
+					<Add directory="/opt/local/Library/Frameworks/QtCore.framework/Versions/4/Headers" />
+					<Add directory="/opt/local/Library/Frameworks/QtGui.framework/Versions/4/Headers" />
+					<Add directory="/opt/local/include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-framework CoreMIDI" />
+					<Add option="-framework CoreAudio" />
+					<Add option="-framework CoreFoundation" />
+					<Add option="-lQtCore" />
+					<Add option="-lQtGui" />
+					<Add directory="/opt/local/lib" />
+					<Add directory="/opt/local/lib/gcc48" />
+				</Linker>
+			</Target>
+			<Target title="l64_alsa_dbug">
+				<Option platforms="Unix;" />
+				<Option output="bin/linux/64_alsa/cythar-alsa_dbug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/64_alsa_dbug" />
+				<Option type="1" />
+				<Option compiler="gcc_48_compiler_---_x86_64" />
+				<Compiler>
+					<Add option="-Wshadow" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Winline" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-m64" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-isystem/usr/include" />
+					<Add option="-isystem/usr/include/QtCore" />
+					<Add option="-isystem/usr/include/QtGui" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__LINUX_ALSA__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-DDEBUG" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-lpthread" />
+					<Add option="-lasound" />
+					<Add option="-ldl" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add directory="/lib64" />
+					<Add directory="/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="MOC-Compile">
+				<Option output="no_out_here__only_mocs" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="" />
+				<Option object_output="moc/" />
+				<Option type="5" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-Os" />
+				</Compiler>
+			</Target>
+			<Target title="GCC 4.8 l64_alsa">
+				<Option platforms="Unix;" />
+				<Option output="bin/linux/64_alsa/GCC 4" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/GCC 4.8 64_alsa" />
+				<Option type="1" />
+				<Option compiler="gcc_48_compiler_---_x86_64" />
+				<Compiler>
+					<Add option="-march=corei7-avx" />
+					<Add option="-fomit-frame-pointer" />
+					<Add option="-fexpensive-optimizations" />
+					<Add option="-O3" />
+					<Add option="-m64" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-funsafe-loop-optimizations" />
+					<Add option="-fipa-pta" />
+					<Add option="-isystem/usr/include" />
+					<Add option="-isystem/usr/include/QtCore" />
+					<Add option="-isystem/usr/include/QtGui" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__LINUX_ALSA__" />
+					<Add option="-D__UNIX__" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+					<Add option="-m64" />
+					<Add option="-lpthread" />
+					<Add option="-lasound" />
+					<Add directory="/lib64" />
+					<Add directory="/usr/lib64" />
+				</Linker>
+			</Target>
+			<Target title="l64_jack_dbug">
+				<Option platforms="Unix;" />
+				<Option output="bin/linux/64_jack/cythar-jack_dbug" prefix_auto="1" extension_auto="1" />
+				<Option working_dir="bin/" />
+				<Option object_output="obj/linux/64_jack_dbug" />
+				<Option type="1" />
+				<Option compiler="gcc_48_compiler_---_x86_64" />
+				<Compiler>
+					<Add option="-Wshadow" />
+					<Add option="-Winit-self" />
+					<Add option="-Wredundant-decls" />
+					<Add option="-Wcast-align" />
+					<Add option="-Wfloat-equal" />
+					<Add option="-Winline" />
+					<Add option="-Wunreachable-code" />
+					<Add option="-Wmissing-declarations" />
+					<Add option="-Wmissing-include-dirs" />
+					<Add option="-Wswitch-enum" />
+					<Add option="-Wswitch-default" />
+					<Add option="-Wmain" />
+					<Add option="-std=c++11" />
+					<Add option="-Wextra" />
+					<Add option="-m64" />
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-fexceptions" />
+					<Add option="-Wnoexcept" />
+					<Add option="-isystem/usr/include" />
+					<Add option="-isystem/usr/include/QtCore" />
+					<Add option="-isystem/usr/include/QtGui" />
+					<Add option="-isystem./3th_party" />
+					<Add option="-isystem$(#dc.uic_target)" />
+					<Add option="-isystem$(#dc.moc_target)" />
+					<Add option="-D__LINUX__" />
+					<Add option="-D__UNIX__" />
+					<Add option="-D__UNIX_JACK__" />
+					<Add option="-DDEBUG" />
+					<Add directory="$(#dc.uic_target)" />
+					<Add directory="/usr/include/QtCore" />
+					<Add directory="/usr/include/QtGui" />
+				</Compiler>
+				<Linker>
+					<Add option="-m64" />
+					<Add option="-ljack" />
+					<Add option="-ldl" />
+					<Add option="-static-libgcc" />
+					<Add option="-static-libstdc++" />
+					<Add directory="/lib64" />
+					<Add directory="/usr/lib64" />
+				</Linker>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="Release" targets="l64_alsa;l64_jack;l32_alsa;l32_jack;w64_winmm;w64_ks;w32_ks;w32_winmm;" />
+		</VirtualTargets>
+		<Compiler>
+			<Add option="-std=c++11" />
+			<Add directory="$(#dasticcythar)" />
+			<Add directory="$(#dasticcythar)/3th_party" />
+			<Add directory="$(#dasticcythar)/uiced" />
+			<Add directory="$(#dasticcythar)/moced" />
+		</Compiler>
+		<Linker>
+			<Add option="-lQtGui" />
+			<Add option="-lQtCore" />
+		</Linker>
+		<Unit filename="3th_party/rtmidi-2.0.1/RtMidi.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="cast/any2uchar.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="cast/lexical_cast.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="class/properties.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="crossplatt_fontsize_fix.hpp" />
+		<Unit filename="crossplatt_threading.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_alg_lengthmatrix.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_alg_lengthmatrix.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_alg_lengthmatrix.hpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_algorithm_length.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_algorithm_rebeca.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_bar_chain.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_alsa" />
+			<Option target="l32_jack" />
+			<Option target="w64_winmm" />
+			<Option target="w64_ks" />
+			<Option target="w32_winmm" />
+			<Option target="w32_ks" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_builder.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_builder.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_documentation.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_documentation.h">
+			<Option compiler="gcc" use="0" buildCommand="$(#qt.uic)    dc_gui_documentation.ui -o $(#dc.uic_target)/dc_gui_documentation.uiced.h\n$(#qt.moc)    dc_gui_documentation.2moc.h -o $(#dc.moc_target)/dc_gui_documentation.moced.cpp\n" />
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="dc_export_takt.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_export_takt.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_filemanager.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_filemanager.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_filemanager.ui          -o $(#dc.uic_target)/dc_gui_filemanager.uiced.h\n$(#qt.moc) dc_gui_filemanager.2moc.h -o $(#dc.moc_target)/dc_gui_filemanager.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_inits.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_mainwindow.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_mainwindow.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_mainwindow_clipboard.ui -o $(#dc.uic_target)/dc_gui_mainwindow_clipboard.uiced.h\n$(#qt.uic)    dc_gui_mainwindow_questmark.ui -o $(#dc.uic_target)/dc_gui_mainwindow_questmark.uiced.h\n\n$(#qt.uic)    dc_gui_mainwindow.ui -o $(#dc.uic_target)/dc_gui_mainwindow.uiced.h\n$(#qt.moc) dc_gui_mainwindow.2moc.h -o $(#dc.moc_target)/dc_gui_mainwindow.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_midideviceeditor.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_midideviceeditor.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_midideviceeditor.ui             -o $(#dc.uic_target)/dc_gui_midideviceeditor.uiced.h\n$(#qt.uic)    dc_gui_midideviceeditormaster.ui   -o $(#dc.uic_target)/dc_gui_midideviceeditormaster.uiced.h\n$(#qt.moc) dc_gui_midideviceeditor.2moc.h     -o $(#dc.moc_target)/dc_gui_midideviceeditor.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_patternmaster.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_patternmaster.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_patternmaster.ui          -o $(#dc.uic_target)/dc_gui_patternmaster.uiced.h\n$(#qt.moc) dc_gui_patternmaster.2moc.h -o $(#dc.moc_target)/dc_gui_patternmaster.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_patternsaite_mute.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_patternsaite_mute.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_patternsaite_mute.ui          -o $(#dc.uic_target)/dc_gui_patternsaite_mute.uiced.h\n$(#qt.moc) dc_gui_patternsaite_mute.2moc.h -o $(#dc.moc_target)/dc_gui_patternsaite_mute.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_rebeca.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_rebeca.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)   dc_gui_rebeca.ui              -o $(#dc.uic_target)/dc_gui_rebeca.uiced.h\n$(#qt.moc) dc_gui_rebeca.2moc.h      -o $(#dc.moc_target)/dc_gui_rebeca.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_step.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_step.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_Step.ui -o $(#dc.uic_target)/dc_gui_step.uiced.h\n$(#qt.moc) dc_gui_step.2moc.h -o $(#dc.moc_target)/dc_gui_step.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_step_matrix.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_step_matrix.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)   dc_gui_step_matrix.ui           -o $(#dc.uic_target)/dc_gui_step_matrix.uiced.h\n$(#qt.moc) dc_gui_step_matrix.2moc.h  -o $(#dc.moc_target)/dc_gui_step_matrix.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_step_velocity.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_step_velocity.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)   dc_gui_step_velocity.ui           -o $(#dc.uic_target)/dc_gui_step_velocity.uiced.h\n$(#qt.moc) dc_gui_step_velocity.2moc.h  -o $(#dc.moc_target)/dc_gui_step_velocity.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_stepeditor.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_stepeditor.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_stepeditor.ui -o $(#dc.uic_target)/dc_gui_stepeditor.uiced.h\n$(#qt.moc) dc_gui_stepeditor.2moc.h  -o $(#dc.moc_target)/dc_gui_stepeditor.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_stepmaster.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_stepmaster.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)   dc_gui_StepMaster.ui -o $(#dc.uic_target)/dc_gui_stepmaster.uiced.h\n$(#qt.moc) dc_gui_stepmaster.2moc.h -o $(#dc.moc_target)/dc_gui_stepmaster.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_styles.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_styles.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_taktmaster.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_taktmaster.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_taktmaster.ui -o $(#dc.uic_target)/dc_gui_taktmaster.uiced.h\n$(#qt.uic)    dc_gui_taktchain.ui -o $(#dc.uic_target)/dc_gui_taktchain.uiced.h\n$(#qt.moc) dc_gui_taktmaster.2moc.h -o $(#dc.moc_target)/dc_gui_taktmaster.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_taktsaite.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_taktsaite.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_taktsaite.ui -o $(#dc.uic_target)/dc_gui_taktsaite.uiced.h\n$(#qt.moc) dc_gui_taktsaite.2moc.h  -o $(#dc.moc_target)/dc_gui_taktsaite.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_taktsaite_mute.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_taktsaite_mute.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_taktsaite_mute.ui -o $(#dc.uic_target)/dc_gui_taktsaite_mute.uiced.h\n$(#qt.moc) dc_gui_taktsaite_mute.2moc.h -o $(#dc.moc_target)/dc_gui_taktsaite_mute.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_taktsaite_velocity.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_taktsaite_velocity.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)    dc_gui_taktsaite_velocity.ui -o $(#dc.uic_target)/dc_gui_taktsaite_velocity.uiced.h\n$(#qt.moc) dc_gui_taktsaite_velocity.2moc.h -o $(#dc.moc_target)/dc_gui_taktsaite_velocity.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_gui_tuneslidereditor.2moc.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_gui_tuneslidereditor.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.uic)   dc_gui_tuneslidereditor.ui -o $(#dc.uic_target)/dc_gui_tuneslidereditor.uiced.h\n$(#qt.uic)   dc_gui_tuneslider.ui -o $(#dc.uic_target)/dc_gui_tuneslider.uiced.h\n$(#qt.uic)   dc_gui_tunevaluebox.ui -o $(#dc.uic_target)/dc_gui_tunevaluebox.uiced.h\n$(#qt.moc) dc_gui_tuneslidereditor.2moc.h -o $(#dc.moc_target)/dc_gui_tuneslidereditor.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="dc_log_informations.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_log_informations.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_in.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_in.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_message.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_message.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_message.hpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_message_factory.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_message_factory.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_message_factory.hpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_sequencer.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_sequencer.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_sequencer.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_sequencer_timer.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_sequencer_timer.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_midi_sequencer_timer.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_objectcopy.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_objectobserver.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_objectstructure.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_objectstructure.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_objectstructure.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_standard_types.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_standard_values.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_ticker_generator.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_ticker_generator.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="dc_ticker_generator.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="extendQt_drag_n_drop.2moc.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="extendQt_drag_n_drop.2moc.h">
+			<Option compile="1" />
+			<Option compiler="gcc" use="1" buildCommand="$(#qt.moc) extendQt_drag_n_drop.2moc.h   -o $(#dc.moc_target)/extendQt_drag_n_drop.moced.cpp" />
+			<Option target="MOC-Compile" />
+		</Unit>
+		<Unit filename="extendQt_exclusive_box.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="extendQt_exclusive_box.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="functions/invert.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="gm_midistandard.h">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="guistuff/child_initializer.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="main.cpp">
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="midi_ports.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="midi_ports.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="midi_ports.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_filemanager.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_mainwindow.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_midideviceeditor.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_patternmaster.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_patternsaite_mute.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_rebeca.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_step.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_step_matrix.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_step_velocity.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_stepeditor.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_stepmaster.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_taktmaster.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_taktsaite.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_taktsaite_mute.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_taktsaite_velocity.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/dc_gui_tuneslidereditor.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="moced/extendQt_drag_n_drop.moced.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="object_dependstrategy.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="object_step.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="objectobserver.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="objectobserver.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="objectobserver.scm.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="objectstructure.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="objectstructure.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="objectstructure.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="pattern/singleton.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="phys_database.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="phys_database.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="phys_database.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="phys_mem_disk_mediator.cpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="phys_mem_disk_mediator.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="phys_mem_disk_mediator.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="stuff/blockguard.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="stuff/functions.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="stuff/hierarchygenerators.h">
+			<Option target="l64_alsa" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="uniques.hpp">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="uniques_this_app.h">
+			<Option target="l64_alsa" />
+			<Option target="l32_alsa" />
+			<Option target="w64_winmm" />
+			<Option target="w32_winmm" />
+			<Option target="l64_alsa_dbug" />
+			<Option target="mac_ppc" />
+			<Option target="GCC 4.8 l64_alsa" />
+			<Option target="l64_jack" />
+			<Option target="l32_jack" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+			<Option target="l64_jack_dbug" />
+			<Option target="mac_i386" />
+			<Option target="mac_x86_64" />
+		</Unit>
+		<Unit filename="version.h" />
+		<Unit filename="win32.rc">
+			<Option link="0" />
+			<Option target="w32_winmm" />
+			<Option target="w64_winmm" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+		</Unit>
+		<Unit filename="win32.res">
+			<Option target="w32_winmm" />
+			<Option target="w64_winmm" />
+			<Option target="w64_ks" />
+			<Option target="w32_ks" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+			<lib_finder disable_auto="1" />
+			<DoxyBlocks>
+				<comment_style block="0" line="0" />
+				<doxyfile_project />
+				<doxyfile_build />
+				<doxyfile_warnings />
+				<doxyfile_output />
+				<doxyfile_dot />
+				<general />
+			</DoxyBlocks>
+			<AutoVersioning>
+				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
+				<Settings autoincrement="0" date_declarations="1" update_manifest="1" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Changes_Log show_changes_editor="1" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
+				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
+			</AutoVersioning>
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

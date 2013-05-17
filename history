@@ -1,0 +1,183 @@
+0.1.4.10
+
+Bug: Taktparameter (Takttranspose etc.) wurden beim Patterncopy nicht mit kopiert : fixed
+GUI: Change "2 all" -> "to all"
+MIDI: Change Portname "is set in ctor..." -> "choose device" (mehr oder weniger Bug, war eine falsche Stringeingabe) ;-)
+
+MAC Bug: Vergessen eine QtGui Lib in packet zu "verlinken" - fixed
+
+0.1.4.9
+
+BUG: Umschalten von Pattern - edit des aktivieren Chanins im alten Patten : fixed
+Change: Seitenzahlen für Handbuch auf Fragezeichen auf aktuelle Handbuchversion angepasst. 
+GUI: Eject zu "file"
+GUI: Ein paar Fontgrössen angepasst.
+Change filenames in Installer Paketen
+
+0.1.4.8
+
+ADD: Markierung auf GUI für TaktAkkort, TaktTranspose, TaktsaiteMute per laufendem oder Master Takt
+Change: Laufender Takt wird auf TaktNavi-Button Markiert.
+
+0.1.4.7
+
+GUI: Change size 2all-Button
+CHANGE: TaktVerkettung: Nun unter jedem Taktmaster eigene Level-Werte. Level über NEXT-LEVEL-Button umschaltbar.
+
+0.1.4.6
+
+GUI: Master-or-Slave-Button-Markierung nun schwarz wenn Slave; "mas/slave" zu "slave" 
+BUG: Pausen-Button: Pausen-Symbol zu "II", da Windows das Symbol als "I" anzeigt
+GUI: Load-Save-Button-Pfeile zu Ejectsymbol "⏏"
+GUI: Panic-Button nicht mehr rot, Beschriftung zu "panic"
+GUI: Presetbuttons nun mit schwarzer Schrift, um sie von Anderen Buttons optisch abzukoppeln
+GUI: Add Play/Stop/Pause Markierung
+Add: Panic sendete nur ALL-NOTES-OFF, manuelles stoppen aller laufenden Noten hinzugefügt.
+
+0.1.4.5
+
+Add: native Filedialog
+Bug: läd Patternmute nicht : fixed
+Bug: Beendet laufende Noten bei STOP nicht : fixed
+Add: Reset TaktChaining bei Stop
+Bug: Patternsaiten Parameter in Akkord Editor werden beim Pattern umschalten nicht korrekt geladen : fixed
+
+0.1.4.4
+
+Bug: TaktChaning bezog auf allen Pattern Daten von Pattern 1 -> Absturz : fixed
+
+0.1.4.3
+
+GUI: Tooltips TaktVerkettung überarbeitet/ teilweise entfernt
+GUI: Add Patternsaite Mute zu NoteinfoBoxen - PatternsaitenMute kann nun auf diesen Butten gesetzt werden
+GUI: Aktueller Level und FOR-CountDown Labels in Taktmaster - schwarze Schrift wenn MasterGelb
+GUI: Add Mausrad-Shortcuts für TaktChaining Werte FOR, NExt, NEXT-LEVEL sowie Erweiterung der Taktchaining Drehregler um Modi Einstellungen
+Change: L1 als standard-Wert statt L++ für NEXT-LEVEL-Werte
+GUI: Add Tooltip "From E  [F -11][F# -10][G -9][G# -8][A -7][A# -6][B -5][C -4][C# -3][D -2][D# -1][E][F +1][F# +2][G +3][G# +4][A +5][A# +6][B +7][C +8][C# +9][D +10][D# +11]" über Taktmaster-Plus-Minus und PatternTranspose-Slider
+
+MOLL WAR ERST HIER!
+
+TODO:
+
+Autoinkrement beim drücken
+
+0.1.4.2
+
+Bug: equal 2 Master spielt auch den Master : fixed
+Bug: Anzeige des CountDown FOR nur noch im laufenden Takt : fixed
+
+0.1.4.1
+
+Reaktivierung Patterncopy
+
+0.1.4.0 Alpha
+
+SONGMODE
+
+Bug: Wird ein unvollständiges Projekt geladen, werden die Fehlenden Werte mit Defaults initalisiert : fixed
+
+KONSOLE: deaktiviert, tester bitte über Konsole starten 
+
+0.1.3.10 - Beta
+
+Add: Auto Refresh bei MID-OUT-Errors
+Bug: ShutDown Error bei Win : gefixt
+GUI: kleine Änderungen wie dur zu maj oder mol zu moll ;-)
+GUI: "For & Next in einem Blick auf Taktmaster" & ++ für Folgetakt
+BUG: Songmode fuhr sich fest, wenn For=0 eingestellt wurde : gefixt
+GUI: Song Level umbenannt in Bar chain
+
+0.1.3.9
+
+Alle Plattformen:
+Refactoring: Clockberechnung
+GUI: Add Regler für BPM Kommastellen, BPM Slider nun Linear
+GUI: Change "ACCORD" Reiter zu "CHORD"
+GUI: Change "c.board" zu "clipb."
+Change: BPM von 1-9999 (demnächst auch mehr bis ~2500000 ist kein Problem :-))
+
+Bei allen alten Projekten wird nun die Geschwindigkeit falsch geladen und muss angepasst werden.
+
+Windows:
+Package: Add Lizenz
+
+TASKS:
+Clock testen
+
+0.1.3.8
+
+Alle Plattformen:
+Refactoring: MIDI Out von NULL auf Neu
+
+GUI: vergrösserung MIDI-OUT-ComboBox on MouseOver um Lesbarkeit zu verbessern
+Change: MIDI OUT Port wird nun nach Portnamen identifiziert (vorher Anschlussreihenfolge -> Blödsinn) (Port aus alten Projekten wird nicht mehr geladen)
+
+Package: "last session at exit"-project mit simpler Voreinstellung
+
+Linux:
+Package: enthält cythar-alsa & cythar-jack Version
+Change: cythar-projects Ordner nun unter usr/share/cythar-projects
+Add: virtual IN & virtual OUT-Port für Jack & Alsa
+
+Windows:
+Package: enthält cythar-wmm & cythar-ks version
+Add: Kernel Streaming
+
+Mac OS-X
+Add: Virtual Port für Mac Core
+
+
+
+
+Known Errors:
+Kernelstreaming: 64bit MIDI-Port entfernen -> hard error
+Alsa: schliesst ersten erstellten In-Port bei wechsel nicht mehr 
+Jack: kleines Memory Leak beim wechseln von IN-Geräten wird RtMidiIn nicht gelöscht, da Jack sonst abstürzt (hat wer vor mehrer x-1000.... mal das Gerät zu wechseln während der Laufzeit? :) )
+
+TASKS:
+Testen der Midi Out Funktionalitäten, Geräte entfernen wieder anschliessen etc...
+
+Sinnvolle Abkürzungen für Statusmeldungen vor den Portnamen für
+    STATUS:		Derzeitige Abkürzung (je kürzer, aber aussagekräftig = desto besser ;-)
+    WARNING		{"errWARN"};
+    DEBUG_WARNING	{"errDb-Ok"};
+    UNSPECIFIED		{"errUKn"};
+    NO_DEVICES_FOUND	{"errNDeF"};
+    INVALID_DEVICE	{"errIVDe"};
+    MEMORY_ERROR	{"errMem"};
+    INVALID_PARAMETER	{"errPara"};
+    INVALID_USE		{"errIUse"};
+    DRIVER_ERROR	{"errDriv"};
+    SYSTEM_ERROR	{"errSys"};
+    THREAD_ERROR	{"errThre"};
+    IS_OK		{"OK"};
+    REMOVED_ERROR	{"errRemv"};
+    IS_NOT_OPEN		{"errClos"};
+    IS_NOT_PLUGGED	{"errUnpl"};
+    IS_DUMMY		{"Dummy"};
+
+0.1.3.7
+
+TASKS:
+Test: ist BPM Speed auf windows = Anzeigewert auf Gui ?
+
+CHANGED:
+Bug: Takt Transponierung wird von Takt Akkord überschrieben bei aktiver Option "Takt Akkord per Running Takt" : gefixt
+Add: Wertanzeige für Pattern Transponierung Relger
+Bug: sendet erste Events beim Starten des Sequenzers nicht : gefixt
+Bug: Error beim beenden : gefixt (hoff ich   )
+GUI: Master/Slave Button mit Resize Win Button vertauscht/verschoben
+GUI: Win Fontdarstellung optimiert : noch nicht perfekt
+BUG: Windows: Memory Leak in Clocktimer : gefixt
+CHANGE:	Speed Min/Max 5-2500bpm (da mit derzeitiger impl auf win nicht höher auflösbar)
+GUI: MAC: Fontsize angepasst
+
+
+
+0.1.3.6
+
+TASKS:
+Test: Start Stop Continue Funktionen ok ?
+
+CHANGED:
+Slave Mode Start Stop Continue überarbeitet.

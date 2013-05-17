@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>PatternsaiteMute</class>
+ <widget class="QWidget" name="PatternsaiteMute">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>94</width>
+    <height>49</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pb">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>21</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+  </widget>
+  <widget class="QDial" name="dial_time">
+   <property name="geometry">
+    <rect>
+     <x>19</x>
+     <y>2</y>
+     <width>34</width>
+     <height>30</height>
+    </rect>
+   </property>
+   <property name="toolTip">
+    <string>TimeMute ::: set the number of bars to mute this pattern.</string>
+   </property>
+   <property name="minimum">
+    <number>0</number>
+   </property>
+   <property name="maximum">
+    <number>16</number>
+   </property>
+   <property name="pageStep">
+    <number>1</number>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_timeDummy">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>0</y>
+     <width>31</width>
+     <height>31</height>
+    </rect>
+   </property>
+  </widget>
+  <zorder>pb_timeDummy</zorder>
+  <zorder>dial_time</zorder>
+  <zorder>pb</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

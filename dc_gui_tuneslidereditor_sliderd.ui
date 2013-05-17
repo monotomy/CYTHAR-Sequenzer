@@ -1,0 +1,1091 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Tuneslidereditor</class>
+ <widget class="QWidget" name="Tuneslidereditor">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>393</width>
+    <height>421</height>
+   </rect>
+  </property>
+  <property name="palette">
+   <palette>
+    <active>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </active>
+    <inactive>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>255</red>
+        <green>255</green>
+        <blue>255</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </inactive>
+    <disabled>
+     <colorrole role="Highlight">
+      <brush brushstyle="SolidPattern">
+       <color alpha="255">
+        <red>217</red>
+        <green>217</green>
+        <blue>217</blue>
+       </color>
+      </brush>
+     </colorrole>
+    </disabled>
+   </palette>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QPushButton" name="pb_viewAccord">
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>367</y>
+     <width>101</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>- accord -</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_viewTune">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>367</y>
+     <width>101</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>- tune -</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="hs_transpose">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>296</y>
+     <width>181</width>
+     <height>31</height>
+    </rect>
+   </property>
+   <property name="palette">
+    <palette>
+     <active>
+      <colorrole role="Highlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>82</red>
+         <green>82</green>
+         <blue>82</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </active>
+     <inactive>
+      <colorrole role="Highlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>82</red>
+         <green>82</green>
+         <blue>82</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </inactive>
+     <disabled>
+      <colorrole role="Highlight">
+       <brush brushstyle="SolidPattern">
+        <color alpha="255">
+         <red>217</red>
+         <green>217</green>
+         <blue>217</blue>
+        </color>
+       </brush>
+      </colorrole>
+     </disabled>
+    </palette>
+   </property>
+   <property name="minimum">
+    <number>-24</number>
+   </property>
+   <property name="maximum">
+    <number>24</number>
+   </property>
+   <property name="singleStep">
+    <number>1</number>
+   </property>
+   <property name="pageStep">
+    <number>12</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QWidget" name="horizontalLayoutWidget_2">
+   <property name="geometry">
+    <rect>
+     <x>9</x>
+     <y>96</y>
+     <width>181</width>
+     <height>191</height>
+    </rect>
+   </property>
+   <layout class="QHBoxLayout" name="layout_sliderScale_3">
+    <property name="spacing">
+     <number>6</number>
+    </property>
+    <property name="leftMargin">
+     <number>22</number>
+    </property>
+    <property name="rightMargin">
+     <number>0</number>
+    </property>
+    <item>
+     <widget class="Line" name="line_40">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_41">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_42">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_43">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_44">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_45">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_46">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_47">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_48">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_49">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_50">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_51">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="Line" name="line_111">
+      <property name="palette">
+       <palette>
+        <active>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </active>
+        <inactive>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>178</red>
+            <green>177</green>
+            <blue>177</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </inactive>
+        <disabled>
+         <colorrole role="WindowText">
+          <brush brushstyle="SolidPattern">
+           <color alpha="255">
+            <red>118</red>
+            <green>118</green>
+            <blue>117</blue>
+           </color>
+          </brush>
+         </colorrole>
+        </disabled>
+       </palette>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>0</y>
+     <width>169</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents_2">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>163</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pb_defaultDrum_3">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>-1</y>
+       <width>101</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>set drum</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_defaultDrum">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>-1</y>
+       <width>101</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>set drum</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_defaultTune">
+     <property name="geometry">
+      <rect>
+       <x>-60</x>
+       <y>-1</y>
+       <width>101</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>set EAdgbe</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pb_defaultTune_3">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>16</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_defaultTune_4">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>0</y>
+     <width>16</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&gt;</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pb_defaultTune_5">
+   <property name="geometry">
+    <rect>
+     <x>185</x>
+     <y>34</y>
+     <width>16</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&gt;</string>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea_2">
+   <property name="geometry">
+    <rect>
+     <x>16</x>
+     <y>34</y>
+     <width>169</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="frameShape">
+    <enum>QFrame::StyledPanel</enum>
+   </property>
+   <property name="frameShadow">
+    <enum>QFrame::Sunken</enum>
+   </property>
+   <property name="verticalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="horizontalScrollBarPolicy">
+    <enum>Qt::ScrollBarAlwaysOff</enum>
+   </property>
+   <property name="widgetResizable">
+    <bool>true</bool>
+   </property>
+   <widget class="QWidget" name="scrollAreaWidgetContents_3">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>163</width>
+      <height>28</height>
+     </rect>
+    </property>
+    <widget class="QPushButton" name="pb_accord_7">
+     <property name="geometry">
+      <rect>
+       <x>158</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>sus2</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_2">
+     <property name="geometry">
+      <rect>
+       <x>33</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>7</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_5">
+     <property name="geometry">
+      <rect>
+       <x>108</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>sus4</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_1">
+     <property name="geometry">
+      <rect>
+       <x>8</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>moll</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_3">
+     <property name="geometry">
+      <rect>
+       <x>58</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>mo7</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_0">
+     <property name="geometry">
+      <rect>
+       <x>-17</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>dur</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_4">
+     <property name="geometry">
+      <rect>
+       <x>83</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>maj7</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pb_accord_6">
+     <property name="geometry">
+      <rect>
+       <x>133</x>
+       <y>-1</y>
+       <width>26</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <pointsize>6</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>6</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QPushButton" name="pb_defaultTune_6">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>34</y>
+     <width>16</width>
+     <height>34</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>6</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>&lt;</string>
+   </property>
+  </widget>
+  <zorder>pb_viewAccord</zorder>
+  <zorder>pb_viewTune</zorder>
+  <zorder>hs_transpose</zorder>
+  <zorder>horizontalLayoutWidget_2</zorder>
+  <zorder>scrollArea</zorder>
+  <zorder>pb_defaultTune_3</zorder>
+  <zorder>pb_defaultTune_4</zorder>
+  <zorder>pb_defaultDrum_3</zorder>
+  <zorder>pb_defaultDrum</zorder>
+  <zorder>pb_defaultTune</zorder>
+  <zorder>pb_defaultTune_5</zorder>
+  <zorder>scrollArea_2</zorder>
+  <zorder>pb_defaultTune_6</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

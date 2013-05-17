@@ -1,0 +1,1628 @@
+\documentclass[10pt,final,a4paper]{report}
+\setlength{\headheight}{1.1\baselineskip}
+%\setlength{\headheight}{1.1\baselineskip}
+\usepackage[utf8]{inputenc}				% Eingabe Zeichensatz (ansinew=windows,latin1=unix,utf8=unicode)
+\usepackage[T1]{fontenc}				% Ausgabe Schriften (T1=fuer Deutsch besser)
+\usepackage{lmodern}
+\usepackage[ngerman] {babel}
+\usepackage[german] {varioref}
+%\usepackage{tex4ht}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+
+\usepackage[automark]{scrpage2}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+
+\usepackage{picture,xcolor}
+
+\usepackage{times}
+\pagestyle{scrheadings}
+\parindent 0pt
+
+\usepackage{blindtext,hyperref,color}
+\definecolor{darkblue}{rgb}{0,0,.5}
+\hypersetup
+{
+	colorlinks=true, 
+	breaklinks=true, 
+	linkcolor=darkblue, 
+	menucolor=darkblue, 
+	pagecolor=black, 
+	urlcolor=darkblue,
+	pdftitle={CYTHAR Sequenzer Handbuch - Beta 0.1.4.9},
+} % linkcolor=darkgray
+
+
+\author{}
+\title{CYTHAR Sequenzer Handbuch\\ Beta 0.1.4.9}
+
+\begin{document}
+
+\sffamily % selects a sans serif font family
+
+\maketitle
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Layout
+% ß ctrl + f1
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% CHAPTER
+\newcommand{
+	\MyChapter}[2]{
+		\chapter[#1]{#1}\label{chap:#2}}
+% CHAPTER with subtitle
+\newcommand{
+	\MyChapterSubTitle}[3]{
+		\chapter[#1]{#1\newline\normalfont\small\textbf{{#2}}}
+	\label{chap:#3}}
+% SECTION 
+\newcommand{
+	\MySection}[2]{\section[#1]{#1}\label{sec:#2}}
+% SECTION with subtitle
+\newcommand{
+	\MySectionSubTitle}[3]{
+		\section[#1]{#1\newline\normalfont\small\textbf{{#2}}}
+	\label{sec:#3}
+}
+% SUB SECTION 
+\newcommand{
+	\MySubSection}[2]{
+		\subsection{#1}\label{sec:#2}}
+% SUB SECTION with subtitle
+\newcommand{
+	\MySubSectionSubTitle}[3]{
+		\subsection[#1]{#1\newline\normalfont\small\textbf{{#2}}}
+	\label{sec:#3}}
+% SUB SUB SECTION 
+\newcommand{
+	\MySubSubSection}[2]{
+		\subsubsection{#1}\label{sec:#2}}
+% SUB SUB SECTION with subtitle
+\newcommand{
+	\MySubSubSectionSubTitle}[3]{
+		\subsubsection[#1]{#1\newline\normalfont\small\textbf{{#2}}}
+	\label{sec:#3}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Other Shortcuts like " "
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\gin}{\textquotedblleft}
+\newcommand{\gout}{\textquotedblright}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Makros
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Gui Picture insert
+\newcommand{
+	\insertGUIpicLabled}[9]{
+		\begin{wrapfigure}[#5]{r}{#4 pt}
+		\centering{
+			\scalebox{#3}[#3]{
+				\includegraphics[trim = #6px #7px #8px #9px, clip]{#1}
+				}
+			}
+		\caption{
+			\label{#2}
+		}
+		\end{wrapfigure}
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Duden
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\LEXmididevice}{MIDI-Gerät}
+\newcommand{\LEXmidichannel}{MIDI-Kanal}
+\newcommand{\LEXmidichannels}{MIDI-Kanäle}
+\newcommand{\barre}{Barré}
+
+% Buttons
+\newcommand{\playbutton}{„play“-Button}
+\newcommand{\navibutton}{„navigation“-Button}
+\newcommand{\plusminusbutton}{„plus minus“-Button}
+\newcommand{\mutebutton}{„mute“-Button}
+\newcommand{\stackmutebutton}{„Stapelmute“-Button}
+\newcommand{\timemute}{Timemute}
+\newcommand{\nullvalue}{„null“-Wert}
+\newcommand{\lhoperand}{„lefthand“}
+\newcommand{\songmodebutton}{„songmode“-Button}
+\newcommand{\singlemodebutton}{„single Mode“-Button}
+\newcommand{\linearmodebutton}{„linear Mode“-Button}
+\newcommand{\usedatebutton}{„use data“ -Button}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Pictures
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\PICGUIstepelement}{pix/gui_all.png}
+\newcommand{\PICGUIquestmark}{pix/gui_all.png}
+\newcommand{\PICGUIstepeditor}{pix/gui_all.png}
+\newcommand{\PICGUIpatternsaitemechanic}{pix/gui_all.png}
+\newcommand{\PICGUIstepmaster}{pix/gui_all.png}
+\newcommand{\PICGUImidideviceeditor}{pix/gui_all.png}
+\newcommand{\PICGUIpatternmaster}{pix/gui_all.png}
+\newcommand{\PICGUItaktmaster}{pix/gui_all.png}
+\newcommand{\PICGUItaktsaiteelement}{pix/gui_all.png}
+\newcommand{\PICGUIrebeca}{pix/gui_all.png}
+\newcommand{\PICGUIsequencercontrol}{pix/gui_all.png}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% References
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\SecRef}[1]{\nameref{sec:#1}}	% Nameref
+\newcommand{\SecNumRef}[1]{\ref{sec:#1} \nameref{sec:#1}} % KapNameref
+\newcommand{\ChapRef}[1]{\nameref{chap:#1}}	% Nameref
+\newcommand{\ChapNumRef}[1]{\ref{chap:#1} \nameref{chap:#1}} % KapNameref
+
+\newcommand{\TITLEdragndrop}{\textbf{Drag'n'Drop}}
+\newcommand{\TITLEshortcut}{\textbf{Shortcuts}}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Intro Part
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapter{Frühsport}{IntroCHAP}
+\MySection{Einleitung}{Intro}
+CYTHAR ist ein purer MIDI Stepsequenzer und es wird davon ausgegangen, dass der Leser grundlegend mit dem MIDI-Protokoll bzw. der Steuerung von Synthesizern vertraut ist. Es ist nicht zwingend notwendig über umfangreiche Kenntnisse in der Notentheorie zu verfügen, erleichtert aber durchaus das Verständnis. Grundlegendes, theoretisches Wissen über die Handhabung einer Gitarre wäre von Vorteil, ist aber kein Muss, um mit CYTHAR Sequenzer produktiv zu sein.
+
+
+Dieses Manual ist so strukturiert, dass die wichtigsten Dinge, um mit CYTHAR Sequenzer ein \SecRef{MidiEvent} auszulösen zuerst geklärt werden, aber die Zusammenhänge dabei nicht unter den Tisch fallen, um möglichst schnell und gezielt zu den ersten Sounds zu gelangen. Es empfiehlt sich daher, sich von Punkt zu Punkt zu hangeln und sich mit den komplexesten Dingen am Ende zu beschäftigen.  Dabei kann \SecNumRef{QuickStart} übersprungen werden.
+
+Wer dennoch sofort ahnungslos ein \SecRef{MidiEvent} ins Blaue schießen möchte versucht es mit \SecNumRef{QuickStart} und kommt vielleicht später zurück.
+
+Weiterhin ist der gesamte Text wild ineinander verlinkt, um bei Unklarheiten umgehend zur entsprechenden Erklärung zu gelangen (setzt selbstverständlich die digitale Form voraus... :-) )
+
+~
+
+Für Fragen, Feedback und Kritik stehen wir dir im Forum auf \url{www.forum.cythar.sequenzer.org} gern zur Verfügung.
+
+~
+
+Deine Resultate würden wir ebenfalls gern hören, um zu wissen ob sich die ganze Arbeit gelohnt hat und um etwas Musik zu genießen \url{www.forum.cythar.sequenzer.org/your_music}.
+
+~
+
+~
+
+Frohes Schaffen!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Quickstart
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySectionSubTitle{Schnellstart}{Für Hektische und Autodidakten}{QuickStart}
+CYTHAR kommt bei seiner Auslieferung mit einem einfachen Beispielprojekt daher, welches beim Anwendungsstart geladen wird. Über den \SecNumRef{GUIMidiDevEditor} muss nur MIDI-Gerät und Kanal gesetzt werden. Anschließend ist der \playbutton~(siehe \SecNumRef{GuiSequencerControl}) zu klicken.
+
+~
+
+Weitere Hilfe könnte dennoch „\SecRef{GuiQuestmark}“ bieten, welches Handbuchseiten zum jeweiligem Benutzeroberflächenelement öffnet (siehe \SecNumRef{GuiQuestmark}) .
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Notion
+%
+% References
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapter{Begriffsklärung}{Notion}
+\MySection{MIDI-Event}{MidiEvent}
+Das Ereignis bzw. die Daten, welche tatsächlich zu einem beschreibbaren, MIDI-fähigem Gerät/Synthesizer im MIDI-Format übermittelt werden.
+
+\textit{In CYTHAR ist es nur möglich über einen aktivierten \SecRef{Step}~(\SecRef{GuiStepElementButton} weiß, nicht mute) ein \SecRef{MidiEvent} auszulösen. Dieser \SecRef{Step} muss dazu zwingend über \SecRef{EventVelocity} und \SecRef{EventLength} größer null verfügen.}
+%
+%
+%
+\MySection{Eventnote}{EventNote}
+Die Tonhöhe bzw. der Notenwert des \SecRef{MidiEvent}. Dieser wird in CYTHAR aus Offsets von in Reihe geschalteten Elementen berechnet (siehe \ChapNumRef{Offsets}).
+
+~
+
+\begin{tabular}{lll}
+	Minimalwert: 	& 0 	& (kein \SecRef{MidiEvent}) \\
+	Orientierung: 	& 60 	& gleich mittel C \\
+	Maximalwert: 	& 127 	&
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{Eventvelocity}{Die Anschlagdynamik}{EventVelocity}
+In der Regel die Lautstärke, mit der ein Ton vom Synthesizer wiedergegeben wird.
+
+~
+
+\begin{tabular}{lll}
+	Minimalwert: & 0 	& (kein \SecRef{MidiEvent}) \\
+	Maximalwert: & 127 	& 
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{Eventlänge}{Die Haltezeit}{EventLength}
+Die Länge zwischen NoteON und NoteOFF, sprich die Spiellänge eines \SecRef{MidiEvent}s. Das kürzeste \SecRef{MidiEvent} welches von CYTHAR Sequenzer gesendet werden kann, entspricht einer 96tel Note oder einem Clockstep.
+
+~
+
+\begin{tabular}{lll}
+	Minimalwert: 	& 0 	& (kein \SecRef{MidiEvent}) \\
+	Orientierung: 	& 96 	& gleich ganzer Note, 24 = 1/4tel \\
+	Maximalwert: 	& 1632 	& gleich 17 ganzer Noten
+\end{tabular}
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Structure
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapterSubTitle{Strukturaufbau}{CYTHAR's Kinder, die Objekte}{Struct}
+\MySubSubSection{Saiten}{Strings}
+sind in CYTHAR an die Saiten einer realen Gitarre angelehnt, jedoch hat eine Saite in CYTHAR Sequenzer zusätzlich eine Zeitachse, welche auf der Benutzeroberfläche von links nach rechts verläuft. Man kann sie deshalb mit einem Track oder einer Spur, wie bei Musik-Software üblich vergleichen. 
+
+Die Saiten sind mit „EAdgbe“ bezeichnet, dabei ist „E“ die unterste und „e“ die oberste der sechs Saiten.
+
+Weiterhin sind Saiten mit ihren Einflussbereichen in die Länge von \SecRef{Takt}en oder \SecRef{Pattern} eingeteilt. \SecRef{Takt} sowie \SecRef{Pattern} besitzen dann jeweils diese Saiten und es wird von \SecRef{PatternString} bzw. \SecRef{TaktString}n gesprochen.
+
+Auf \SecRef{TaktString}n wiederum sind \SecRef{Step}s im Abstand von sechs Clocksteps oder im 16tel-Raster 16 \SecRef{Step}s untergebracht.
+%
+%
+%
+\MySubSubSection{Erbschaft}{Inherence}
+Wie eben erwähnt sind auf einer \SecRef{TaktString} 16 \SecRef{Step}s platziert. Aber auch sind \SecRef{TaktString}n in \SecRef{Takt}en und \SecRef{PatternString}n in \SecRef{Pattern} eingebunden. Es liegt also eine Eltern-Kind Beziehung vor, in der die Kind-Objekte die Attribute ihrer Eltern erben oder sich ihre Werte wie z.B. Offsets \textit{(wird nachfolgend noch erklärt)} addieren. Als Beispiel hat das für einen \SecRef{Step} einer \SecRef{TaktString} zur Folge, dass dieser mute ist, wenn das \SecRef{Pattern} mute ist, in dem sich \SecRef{Takt} mit \SecRef{TaktString} und ihrem \SecRef{Step} befindet.
+%
+%
+%
+\MySection{Step}{Step}
+ist im 16er-Raster auf einer \SecRef{TaktString} platziert.
+
+~
+
+\begin{tabular}{ll}
+	Element auf GUI:			& \SecRef{GuiStepElement} \\
+	Beziehung: 					& erbt von \SecRef{TaktString} \\
+	Direkter Einflussbereich: 	& 1/16 Note auf einer Saite \\
+	Hat: & keine Kinder
+\end{tabular}
+%
+%
+%
+\MySection{Taktsaite}{TaktString}
+hat die Länge einer ganzen Note oder 96 Clocksteps und setzt sich aus 16, in Reihe liegenden \SecRef{Step}s zusammen. Die Taktsaite ist eine von sechs Saiten eines \SecRef{Takt}s
+
+~
+
+\begin{tabular}{ll}
+	Element auf GUI:			& \SecRef{GuiTaktStringElement} \\
+	Beziehung: 					& erbt von \SecRef{Takt} \\
+			 					& erbt von \SecRef{PatternString} \\
+	Direkter Einflussbereich: 	& 1/1 Note auf einer Saite \\
+	Hat: 						& 16x \SecRef{Step}
+\end{tabular}
+%
+%
+%
+\MySection{Takt}{Takt}
+setzt sich aus sechs parallelen \SecRef{TaktString}n zusammen und entspricht ebenfalls der Länge einer ganzen Note.
+
+~
+
+\begin{tabular}{ll}
+	Element auf GUI:			& \SecRef{GuiTaktmaster} \\
+	Beziehung: 					& erbt von \SecRef{Pattern} \\
+	Direkter Einflussbereich: 	& 1/1 Note über alle Saiten \\
+	Hat:						& 6x \SecRef{TaktString}
+\end{tabular}
+%
+%
+%
+%
+%
+\MySection{Patternsaite}{PatternString}
+besitzt 16 in Reihe liegende \SecRef{TaktString}n und hat somit eine Länge von 16 ganzen Noten. Das besondere an der Patternsaite ist die Zuweisbarkeit von Klangerzeugern. Je Patternsaite kann je ein MIDI-Gerät und ein MIDI-Kanal zugewiesen werden.
+
+~
+
+\begin{tabular}{ll}
+	Element auf GUI:			& kein direktes Element \\
+	Beziehung: 					& erbt von \SecRef{Pattern} \\
+	Direkter Einflussbereich: 	& 16 ganze Noten \\
+	Hat: 						& keine direkten Kinder \\
+	Kennt: 						& MIDI-Gerät und MIDI-Kanal 
+\end{tabular}
+%
+%
+%
+\MySection{Pattern}{Pattern}
+der Inhaber von 16, in Reihe liegenden \SecRef{Takt}en und weist somit eine Länge von 16 ganzen Noten auf.
+
+~
+
+\begin{tabular}{ll}
+	Element auf GUI:			& \SecRef{GuiPatternmaster} \\
+	Beziehung: 					& ist Master, keine Erbschaften \\
+	Direkter Einflussbereich: 	& 16 ganze Noten \\
+	Hat: 						& 6x \SecRef{PatternString}
+\end{tabular}
+%
+%
+%
+\MySection{Projekt}{Project}
+ist nicht viel mehr als ein Behälter für 16 parallel laufende \SecRef{Pattern}. Im Projekt selbst werden jedoch Einstellung wie z.B. Geschwindigkeit festgelegt, denen alle anderen Objekte im Projekt unterliegen.
+
+~
+
+\begin{tabular}{ll}
+	Beziehung: 					& keine Erbschaften \\
+	Direkter Einflussbereich: 	& Global \\
+	Hat: 						& 16x \SecRef{Pattern}
+\end{tabular}
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Depencies, Offsets
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapterSubTitle{Offsets statt nur Noten}{Mechanik, Griffe und \barre}{Offsets}
+Bei CYTHAR wird kein direkter Notenwert, wie z.B. bei Piano-Roll-Sequenzern üblich verwendet. CYTHAR arbeitet mit Offsets, welche den Objekten wie \SecRef{Pattern} oder \SecRef{TaktString} zugeordnet sind. Die Offsets der einzelnen Objekte in einer \SecRef{Inherence}sbeziehung bilden schließlich eine Summe, die \SecRef{EventNote}.
+%
+%
+%
+\MySectionSubTitle{Patternsaiten-Stimmung}{Die Mechanik der Gitarre}{PatternStringTune}
+Die Stimmung der \SecRef{PatternString} ist vergleichbar der Stimmung einer Gitarrensaite. Einmal eingestellt, hat die Stimmung enormen Einfluss auf das weitere Spiel. CYTHAR bietet natürlich etwas mehr Flexibilität und die Stimmung der \SecRef{PatternString} kann jeder Zeit mit dem \SecRef{GuiPatternStringEditorTuneslider} kontrolliert geändert werden.
+
+~
+
+Die Patternsaite stellt somit den ersten Offset, auf den sich die nachfolgenden Offsets addieren.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiPatternStringEditorTuneslider} \\
+	Einflussbereich: 		& \SecRef{Pattern}weit, je \SecRef{PatternString} \\
+	Minimalwert: 			& -1 (mute) \\
+	Maximalwert: 			& 127 \\
+	Initialisierungswert: & 0
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{Pattern-Akkord}{Der temperierte Kapodaster}{PatternAccord}
+Der Akkord des \SecRef{Pattern} ist vergleichbar dem Griff, mit dem ein Gitarrist die einzelnen Saiten blockiert, um die gewünschten Töne beim Anschlag klingen zu lassen und ist individuell, je nach Fingerbeweglichkeit variierbar. CYTHAR's Finger sind über ganze zwölf Bünde beweglich, also eine Oktave. Wie bei der Gitarre addiert sich je höher gegriffenem Bund ein Halbton zur Stimmung der blockierten Saite.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiPatternStringEditorAccordslider} \\
+	Einflussbereich: 		& \SecRef{Pattern}weit, je \SecRef{PatternString} \\
+	Minimalwert: 			& -1 (mute) \\
+	Maximalwert: 			& 12 \\
+	Initialisierungswert: 	& 0
+\end{tabular}
+%
+%
+%
+\MySection{Saiten-Grundnotenwert}{BasicNote}
+Ist die Summe aus \SecRef{PatternStringTune} und \SecRef{PatternAccord} (je Saite).
+%
+%
+%
+\MySectionSubTitle{Pattern-Transponierung}{Das \barre spiel}{PatternTransose}
+Das \barre spiel oder banal gesehen die Verschiebung eines Griffs ein paar Lagen hoch oder runter kann Wunder bewirken und ist eine wahre Bereicherung für den Spieler, der dies beherrscht. CYTHARs \barre spiel sprengt reale Möglichkeiten - von der Mechanik aus gesehen bis zu zwei Oktaven hoch zum Korpus und zwei Oktaven tiefer, in die Luft gegriffen...
+
+~
+
+Die \SecRef{PatternTransose} addiert sich zum \SecRef{BasicNote}.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiPatternStringEditorPatterntune} \\
+	Einflussbereich: 		& \SecRef{Pattern}weit, alle \SecRef{PatternString}n \\
+	Minimalwert: 			& -24 \\
+	Maximalwert: 			& +23 \\
+	Initialisierungswert: 	& 0 
+\end{tabular}
+%
+%
+%
+\MySection{Takt-Transponierung}{TaktTransose}
+Die Takt Transponierung lässt sich wie die \SecRef{PatternTransose} etwas granularer per \SecRef{Takt} im \SecRef{Pattern} einstellen, so dass auch die Rocker nicht nur auf einer Lage spielen müssen.
+
+~
+
+Die \SecRef{TaktTransose} addiert sich ebenfalls zum  \SecRef{BasicNote}.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiTaktmasterPlusMinus} \\
+	Einflussbereich: 		& \SecRef{Takt}weit, alle \SecRef{TaktString}n \\
+	Minimalwert: 			& -128 \\
+	Maximalwert: 			& +127 \\
+	Initialisierungswert: 	& 0
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{Takt-Akkord}{Der geübte Griff}{TaktAccord}
+Für leicht Geübte kein Problem, Griffe und Finger nach jedem Takt gezielt andere Lagen finden zu lassen und die Saiten zu blockieren. Hier ein Finger, da ein Finger, noch ein Offset auf jede \SecRef{TaktString}.
+
+~
+
+Der \SecRef{TaktAccord} addiert sich je Saite zum  \SecRef{BasicNote}.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiTaktStringElementPlusMinusButton} \\
+	Einflussbereich: 		& \SecRef{Takt}weit, je \SecRef{TaktString} \\
+	Minimalwert: 			& -128 \\
+	Maximalwert: 			& +127 \\
+	Initialisierungswert: 	& 0 
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{Step-Offset}{Der unglaubliche Hendrix-Finger}{StepOffset}
+Der Hendrix-Finger verlässt seine Hand, turnt zehn Oktaven in jede Richtung über das Griffbrett während seine Kollegen die Stellung halten oder in die entgegengesetzte flitzen.
+
+~
+
+\SecRef{StepOffset} addiert sich auch zum  \SecRef{BasicNote}.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiStepElementPlusMinus} \\
+	Einflussbereich: 		& per \SecRef{Step} \\
+	Minimalwert: 			& -128 \\
+	Maximalwert: 			& +127 \\
+	Initialisierungswert: 	& 0
+\end{tabular}
+%
+%
+%
+\MySection{Offsets Nachwort}{OffsetsOutro}
+Wildes Gezerre an den Saiten ist nicht gleich wilde Musik. Ist die Summe des \SecRef{BasicNote} und aller addierten Offsets kleiner, gleich 0 oder größer 127 hat dies natürlich zur Folge, dass kein \SecRef{MidiEvent} zum Klangerzeuger gesendet wird.
+%
+%
+%
+%
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% GUI Intro
+%
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapterSubTitle{Die Benutzeroberfläche}{Generelle Handhabung}{GuiCHAP}
+Die Benutzeroberfläche (GUI) ist aufgeteilt in mehrere Bereiche mit Elementen, welche Objekte und ihre Daten repräsentieren und Editoren. Die Editoren bearbeiten nur die ausgewählten, markierten Objekte - es wird nachfolgend das editierbare Objekt genannt.
+
+~
+
+Um dem Verständnis an dieser Stelle noch etwas auf die Sprünge zu helfen sei angemerkt, dass der gesamte \SecRef{GuiStepElement}-Bereich einem \SecRef{Takt}, dem editierbaren mit den \SecRef{Step}s seiner sechs \SecRef{TaktString}n entspricht und nur ein Auszug mit Stepauflösung eines Taktes aus dem \SecRef{GuiTaktStringElement}-Bereich ist.
+
+Im \SecRef{GuiTaktStringElement}-Bereich sind in Reihe alle \SecRef{Takt}e mit ihren \SecRef{TaktString}n des editierbaren \SecRef{Pattern} sichtbar. Man könnte also auch den \SecRef{GuiTaktStringElement}-Bereich mit 16 nebeneinander liegenden \SecRef{GuiStepElement}-Bereichen ersetzen. 
+%
+%
+%
+\MySection{Übersicht}{GuiOverview}
+\setlength{\unitlength}{4mm}
+\begin{picture}(30,20)
+	\put(0,18)
+	{
+		% first line
+		\framebox(5,2){Seq.control}
+		\framebox(3,2){}		
+		\framebox(14,2){\SecRef{GuiStepmaster}}
+		\framebox(3,2){quest}
+		\framebox(5,2){speed/bpm}	
+	}
+	\put(0,11.7)
+	{
+		% second line
+		\framebox(5,6){\rotatebox{90}{\SecRef{GuiStepEditor}}}
+		\framebox(3,6){\rotatebox{90}{\ChapRef{Songmode}}}		
+		\framebox(14,6){\SecRef{GuiStepElement}}
+		\framebox(3,6){}
+		\framebox(5,6){\ChapRef{Rebeca}}	
+	}
+	\put(0,9.4)
+	{
+		% second line
+		\makebox(5,0){}
+		\framebox(3,2){s.mode}		
+		\framebox(14,2){\SecRef{GuiTaktmaster}}
+		\framebox(3,2){s.mode}
+		\makebox(5,0){}
+	}
+	\put(0,3.1)
+	{
+		% second line
+		\makebox(5,0){}
+		\framebox(3,6){\rotatebox{90}{Mech. Infobox}}		
+		\framebox(14,6){\SecRef{GuiTaktStringElement}}
+		\framebox(3,6){\rotatebox{90}{}}
+		\makebox(5,0){}
+	}
+	
+	\put(0,0)
+	{
+		% second lines [angle=90, totalheight=1cm]
+		\framebox(5,11.4){\rotatebox{90}{\SecRef{GuiPatternStringEditor}}}
+		\framebox(3,2.8){clipb.}		
+		\framebox(14,2.8){\SecRef{GuiPatternmaster}}
+		\framebox(3,2.8){t.mute}    
+		\framebox(5,11.4){\rotatebox{90}{\SecRef{GUIMidiDevEditor}}}
+	}
+\end{picture}
+
+\pagebreak
+%
+%
+%
+\MySectionSubTitle{Falsche Reiter}{Nichts zum essen. Reiter nicht Ritter!}{GuiTabs}
+Einige Steuerelemente einiger Editoren sind mehrfach belegt. Um zwischen den Doppelbelegung zu wechseln stehen Reiter-Buttons zur Verfügung. Reiter Buttons sind an ihrer GROSSSCHREIBUNG zu erkennen. Der aktivierte Reiter ist dabei dunkel markiert (siehe aktivierten CHORD-Reiter bei \SecRef{GuiPatternStringEditor}).
+%
+%
+%
+\MySection{Farbgebung}{GuiColor}
+Rote Färbung bei Buttons zeigt meist den Editierbarstatus eines Objekts hinter einem Element an.
+
+~
+
+Weiße Färbung verdeutlicht, dass das Objekt explizit aktiv ist also auch nicht mute. 
+
+~
+
+Schwarze Färbung stellt explizite Inaktivität dar oder eben mute \textit{(dies schließt jedoch die Markierung von Reitern aus)}. Ebenfalls wird schwarz bei Funktions-Buttons verwendet um dessen Status darzustellen wie z.B. dass der „play“-Button schwarz ist, wenn der Sequenzer läuft.
+
+~
+
+Gelb-weiß markiert ist das im Moment laufende Objekt.\textit{ Also jenes, von welchem momentan Daten zur Berechnung des \SecRef{MidiEvent} heran gezogenen werden.}
+%
+%
+%
+\MySection{Das Fragezeichen für Vergessliche}{GuiQuestmark}
+\insertGUIpicLabled{\PICGUIquestmark}{fig:_questmark_gui_pic}{1}{65}{3}{865}{576}{296}{72}
+Per Drag'n'Drop lassen sich einige Elemente auf das Fragezeichen droppen. Darauf hin wird die entsprechende Handbuchseite im System nativen PDF Viewer angezeigt (jedoch nur, wenn der PDF Viewer die Übergabe von Seitennummern unterstützt).
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	PatternString Editor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySectionSubTitle{Patternsaiten-Editor}{Die Mechanik}{GuiPatternStringEditor}
+\insertGUIpicLabled{\PICGUIpatternsaitemechanic}{fig:_patternsaiten_gui_pic}{1}{0}{20}{133}{71}{915}{303}
+Der Saiteneditor besteht aus dem TUNE und dem CHORD-Reiter. Beim Wechsel zwischen den Reitern sind die sechs, weißen Saiten-Regler doppelt belegt in \SecRef{GuiPatternStringEditorTuneslider} und \SecRef{GuiPatternStringEditorAccordslider}. Die Auflösung dieser Regler ist ebenfalls von der Reiterwahl abhängig. Unabhängig von der Reiterwahl funktionieren jedoch alle anderen Elemente des Editors mit gleichbleibender Belegung.
+%
+%
+%
+\MySubSectionSubTitle{Patternsaiten-Stimmungsregler}{Die Flügel}{GuiPatternStringEditorTuneslider}
+Über die Saitenregler lässt sich die \SecRef{PatternStringTune} einstellen. Die eingestellten Werte können den \SecRef{GuiTunevalueBox}en entnommen werden.
+%
+%
+%
+\MySubSectionSubTitle{Patternsaiten-Stimmung-Presets}{Das Stimmgerät}{GuiPatternStringEditorTunePreset}
+Durch klicken der oberen Buttons in Abb. \ref{fig:_patternsaiten_gui_pic} „set EAdgbe“ und „set drum“ lassen sich standard Stimmungen allen sechs \SecRef{PatternString}n zuweisen. Mit 'set drum' wird eine Auswahl von sechs General MIDI Drumnoten gewählt \textit{(wird in beerbenden Objekten jedoch ein weiterer Offset verwendet, ist dies für das Drumset auf GM-Standard Basis nicht sonderlich hilfreich...)}.
+%
+%
+%
+\MySubSection{Patternsaiten-Akkordregler}{GuiPatternStringEditorAccordslider}
+Einstellungen an den Akkordreglern, wenn der Reiter CHORD aktiviert ist, ändern den \SecRef{PatternAccord}-Offset der jeweiligen \SecRef{PatternString}.
+
+~
+
+\textit{In Abb. \ref{fig:_patternsaiten_gui_pic} ist ein E-Moll "gegriffen", wenn die \SecRef{PatternStringTune} auf „EAdgbe“ gesetzt ist.}
+%
+%
+%
+\MySubSection{Pattern-Transponierungsregler}{GuiPatternStringEditorPatterntune}
+Durch Verstellen des Transponierungsregler (der unterste Regler) wird die \SecRef{PatternTransose} geändert. Änderungen werden ebenfalls in den \SecRef{GuiTunevalueBox}en angezeigt.
+%
+%
+%
+\MySubSection{Pattern-Akkord-Presets}{GuiPatternStringEditorAccordPreset}
+Ähnlich den \SecRef{GuiPatternStringEditorTunePreset} stehen acht Akkordstimmungen als Preset zur Auswahl. \textit{Diese stimmen aber nur mit ihrer Bezeichnung überein, wenn „EAdgbe“ oder eine Transponierung davon als \SecRef{PatternStringTune} gesetzt ist.} Per Klick werden die Preset Werte auf alle sechs \SecRef{PatternString}n gesetzt.
+%
+%
+%
+\MySubSectionSubTitle{Mechanik-Infobox}{Und Patternsaiten-Mute}{GuiTunevalueBox}
+Die Summe der drei Pattern Offsets (\SecRef{PatternStringTune}, \SecRef{PatternAccord} und \SecRef{PatternTransose}) wird rechts des Editors in den anliegenden Boxen angezeigt. Die Anzeige gibt zum einen den numerischen Wert in Halbtönen, eine digitale Notenschreibweise und den GM-Drumstandard Namen (abgekürzt) aus. Der ausgeschriebene Name des GM-Druminstrumentes kann durch kurzes Überfahren und Halten des Mauszeigers über dem Anzeigefeld als Tooltip angezeigt werden.
+
+~
+
+Außerdem kann durch Klicken der Buttons die jeweilige Patternsaite manuell gemutet werden. Der Mutestatus wird mit jeder Betätigung invertiert.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Step Element
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySectionSubTitle{Step-Elemente}{Die Finger}{GuiStepElement}
+\insertGUIpicLabled{\PICGUIstepelement}{fig:_gui_stepbutton_pic}{1}{65}{7}{351}{417}{822}{230}
+Das Stepelement ist ein kleines Informationsmonster. Es teilt über den roten Balken dem \SecRef{Step} zugewiesenen \SecRef{EventVelocity} mit.
+
+Auf der, sich unter dem Velocity-Balken befindenden Matrix kann die \SecRef{EventLength} in 96tel-Auflösung bis zu einer ganzen Note abgelesen werden (siehe \SecRef{GuiLengthMatrix}). Ist der Wert größer einer ganzen Note, ist die Matrix komplett geschwärzt und mehr Informationen sind dann nur über den \SecRef{GuiStepEditor} erhältlich. 
+
+Der numerische Wert ist der \SecRef{StepOffset}, welcher über die \SecRef{GuiStepElementPlusMinus} geändert werden kann.
+
+In der linken oberen Ecke wird durch ein eingefärbtes Quadrat darauf hingewiesen, dass der \SecRef{Step} verzögert im 16tel-Raster gestartet wird (siehe \SecRef{GuiRebecaDelay}). Rechts oben wird nach gleichem Schema auf eingestellte \SecRef{GuiRebecaRepeat}s aufmerksam gemacht.
+
+Mehr haben wir vorerst nicht hinein bekommen...
+
+~
+
+\TITLEdragndrop
+
+\begin{tabular}{ll}
+	Drag: 	& \SecRef{Step} \\
+	Drop: 	& =Drag*
+\end{tabular}
+
+~
+
+\TITLEshortcut
+
+\begin{tabular}{ll}
+	Mausrad: 			& inkrementiert oder dekrementiert \SecRef{EventVelocity}~um 10 \\
+	Rechte Maustaste: 	& inkrementiert \SecRef{EventLength} um 16tel \textit{(bis ganzer Note, dann wieder von NULL aufsteigend)}
+\end{tabular}
+
+~
+
+~
+
+\textit{*Drop = Drag: Das Element nimmt alle Drops entgegen, welche auch aus diesem gedraggt werden können. In diesem Fall kann auf einen Step auch nur ein Step gedroppt werden.}
+%
+%
+%
+\MySubSection{Step-Actionbutton}{GuiStepElementButton}
+Ein grau gefärbter Step Button gilt als nicht initialisierter \SecRef{Step}. Durch erstmaliges Klicken wird der referenzierte \SecRef{Step} im \SecRef{GuiStepEditor} editierbar. Ein weiterer Klick auf einen editierbaren \SecRef{Step} hat die Umkehrung seines Mutestatus zur Folge. Ein nicht initialisierter \SecRef{Step} wechselt dabei erst in explizit deaktiviert/mute. 
+%
+%
+%
+\MySubSection{Step-Offset - Plus-Minus-Buttons}{GuiStepElementPlusMinus}
+Der \SecRef{StepOffset} kann durch die Plus- und Minus-Buttons einfach inkrementiert oder dekrementiert werden.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Step Editor
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Stepeditor}{GuiStepEditor}
+\insertGUIpicLabled{\PICGUIstepeditor}{fig:_gui_stepeditor_pic}{1}{0}{14}{133}{387}{915}{110}
+Der Stepeditor ist prinzipiell als eine Vergrößerung eines der \SecRef{GuiStepElement} zu betrachten, nur das er nicht die Möglichkeit bietet den \SecRef{StepOffset} zu bearbeiten.
+
+Detailliert kann \SecRef{EventVelocity} und \SecRef{EventLength} am editierbaren \SecRef{Step} eingestellt werden.
+%
+%
+%
+\MySubSection{Stepeditor-Velocity}{GuiStepEditorVelocity}
+Mit dem roten Regler lässt sich \SecRef{EventVelocity} mit einfacher Auflösung verstellen.
+%
+%
+%
+\MySubSection{Stepeditor-Länge}{GuiStepEditorLength}
+Für die Manipulation der \SecRef{EventLength} steht zum einen ein Regler (schwarz-weiß) und die Matrix zur Verfügung. Da über die Matrix keine Werte größer einer ganzen Note eingestellt werden können, steht eine extra Eingabebox unterhalb des Reglers bereit um die \SecRef{EventLength} um je eine Ganze Note je Zähler zu erweitern.
+Der Wertebereich des Regler ist ebenfalls auf eine ganze Note limitiert.
+%
+%
+%
+\MySubSection{Stepeditor-Presets}{GuiStepEditorPreset}
+Durch die je vier, am oberen und unteren Rand angebrachten Preset-Buttons kann per Klick die \SecRef{EventLength} geändert werden. Dazu stehen doppelt punktierte- und triolische-Längen zur Auswahl.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Step Master
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Stepmaster-Button}{GuiStepmaster}
+\insertGUIpicLabled{\PICGUIstepmaster}{fig:_gui_stepmaster_pic}{1}{65}{5}{351}{576}{822}{72} Die Stepmaster-Button haben keine eigentliche Funktionalität. Sie zeigen das laufende Master-16tel unabhängig von jeglichen ausgewählten, editierbaren Objekten.
+
+~
+
+\TITLEdragndrop
+
+\begin{tabular}{ll}
+	Drag: 	& \SecRef{GuiDragNdropSteprow} des Master-16tel\\ 
+			& \SecRef{GuiDragNdropAccord} des Master-16tel \\
+	Drop: 	& =Drag
+\end{tabular}
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Midi Dev Editor
+\pagebreak
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySectionSubTitle{MIDI-Geräte-Editor}{Die Klangerzeuger, der Korpus}{GUIMidiDevEditor} 
+\insertGUIpicLabled{\PICGUImidideviceeditor}{fig:_mididevice_editor_gui_pic}{1}{0}{25}{916}{70}{132}{303}
+Über den \LEXmididevice e Editor kann je \SecRef{PatternString} des editierbaren \SecRef{Pattern} ein MIDI-OUT-Gerät zugewiesen werden. Auch kann ein MIDI-IN-Gerät als globaler Parameter gewählt werden.
+%
+%
+%
+\MySubSection{MIDI-Geräte suchen (refresh)}{GUIMidiDevEditorRefresh}
+Einfaches Klicken des 'refresh'-Buttons ermittelt alle verfügbaren, beschreibbaren und lesbaren MIDI-fähigen, am System angeschlossenen Geräte. Diese stehen dann in den List-boxen zur Auswahl.
+
+\textit{Per default sucht CYTHAR beim Anwendungsstart nach verfügbaren \LEXmididevice en und listet diese. Ein refresh ist also nur nötig, wenn während der Laufzeit von CYTHAR \LEXmididevice e hinzugefügt oder entfernt werden.}
+
+Weiterhin verbindet sich CYTHAR automatisch mit allen gefundenen MIDI-OUT-Geräten und sendet an diese Clock sowie weitere Steuerbefehle wie START, STOP, CONTINUE etc. \textit{(in kommenden Versionen ist hierfür ein separates Steuerelement vorgesehen, um dies kontrolliert vorzunehmen)}.
+%
+%
+%
+\MySubSection{MIDI-IN-Gerät (global)}{GUIMidiDevEditorPerPatternString}
+In der oberen, rot beschrifteten List-Box wird das MIDI-IN-Gerät ausgewählt und muss mit dem \gin set-in\gout-Button bestätigt werden. Das MIDI-IN-Gerät ist ein globaler Parameter und gilt somit für alle Pattern bzw. für den gesamten Sequenzer.
+
+~
+
+Zur Zeit interpretiert CYTHAR MIDI-START, PAUSE, CONTINUE, STOP und RESET zur Synchronisierung bzw. externen Steuerung.
+
+%
+%
+%
+\MySubSection{MIDI-OUT-Gerät je Patternsaite}{GUIMidiDevEditorPerPatternString}
+Mit den sechs, weiß beschrifteten List-Boxen wird das MIDI-OUT-Gerät je \SecRef{PatternString} zugewiesen. Änderung der List-Boxen setzen das Gerät unmittelbar ohne Bestätigung.
+%
+%
+%
+\MySubSection{MIDI-OUT-Kanal je Patternsaite}{GUIMidiChannelEditorPerPatternString}
+Wie beim \SecRef{GUIMidiDevEditorPerPatternString} verhält es sich beim \LEXmidichannel. Einfaches Auswählen einen der 16 verfügbaren \LEXmidichannels~zieht sofortige Änderung dessen nach sich.
+%
+%
+%
+\MySubSection{MIDI-OUT-Gerät und Kanal allen Patternsaiten zuweisen}{GUIMidiDevChannelEditorAll}
+Mit dem \gin set to all strings\gout-Button kann, das in der darüber liegenden Liste ausgewählte \LEXmididevice~und der \LEXmidichannel~per Klick allen \SecRef{PatternString}n zugewiesen werden.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Pattern Master
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Patternmaster}{GuiPatternmaster}
+\insertGUIpicLabled{\PICGUIpatternmaster}{fig:_gui_patternmaster_pic}{1}{65}{5}{351}{72}{822}{537}
+Der Patternmaster repräsentiert je eins der 16 \SecRef{Pattern} des geladenen \SecRef{Project}s. Er dient in erste Linie der Navigation zwischen den \SecRef{Pattern}, bringt aber noch ein paar mute-Features mit sich.
+
+~
+
+\TITLEdragndrop
+
+\begin{tabular}{ll}
+	Drag: 	& \SecRef{GuiDragNdropPattern}\\ 
+	Drop: 	& =Drag
+\end{tabular}
+%
+%
+%
+\MySubSection{Patternmaster-Navigation-Button}{GuiPatternmasterNaviButton}
+Der obere, beschriftete \navibutton~des \SecRef{GuiPatternmaster} navigiert bei Betätigung zum jeweiligen \SecRef{Pattern} des \SecRef{Project}s und setzt dieses editierbar. Dem folgt natürlich, dass auf der Benutzeroberfläche, abgesehen der \SecRef{Project}-Daten nun andere Daten ersichtlich und editierbar werden \textit{(\SecRef{Takt}e, \SecRef{TaktString}n, ...)}.
+%
+%
+%
+\MySubSection{Patternmaster-manuell-Mute}{GuiPatternmasterManualMute}
+Dauerhaft mute gesetzt werden kann das \SecRef{Pattern} über den \mutebutton . Dabei ist zu beachten, dass der manuelle Mute nur verfügbar ist, wenn keine \SecRef{GuiPatternmasterTimeMute}-Werte gesetzt sind und der \mutebutton~daher mit „mute“ beschriftet ist. Klicken des \mutebutton~invertiert den Mutestatus jeweils.
+%
+%
+%
+\MySubSection{Patternmaster-Timer-Mute}{GuiPatternmasterTimeMute}
+Für reichhaltige und exakte Unterbrechungen sorgt die \timemute -Funktion.
+Um die Funktion zu nutzen, wird an dem unterem Regler des \SecRef{GuiPatternmaster} der Mutezeitraum in Takten oder ganzen Noten angegeben. Der \timemute~wird anschließend mit dem \mutebutton~aktiviert und das gesamte \SecRef{Pattern} schweigt umgehend \textit{(laufende \SecRef{MidiEvent}s werden jedoch erst nach Ablauf ihrer regulären \SecRef{EventLength} beendet)}. Sobald der angerissene, laufende Takt abgelaufen ist, beginnt die Dekrementierung der Mutezeit. 
+
+Hektisches Blinken des \mutebutton~verdeutlicht grob die verbleibende Zeit, die das \SecRef{Pattern} noch in mute verweilt.
+
+~
+
+Für faule Unterbrecher steht rechts neben den \SecRef{GuiPatternmaster}n ein \stackmutebutton~bereit, welcher wie die üblichen 16 Finger zweier durchschnittlicher Hände den \mutebutton~aller 16 \SecRef{GuiPatternmaster} gleichzeitig betätigt, wenn diese einen eingestellten \timemute-Wert haben.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Takt Master
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Taktmaster}{GuiTaktmaster}
+\insertGUIpicLabled{\PICGUItaktmaster}{fig:_gui_taktmaster_pic}{1}{65}{5}{351}{313}{822}{302}
+Hinsichtlich der Navigation verhält sich der Taktmaster gleich dem \SecRef{GuiPatternmaster}. Die \SecRef{TaktTransose} ist über die \SecRef{GuiTaktmasterPlusMinus} einstellbar. 
+Die drei Buttons unterhalb des \SecRef{GuiTaktmasterNaviButton} sind für Bearbeitung der \ChapRef{Songmode} zuständig (siehe dazu \ChapNumRef{Songmode}).
+
+~
+
+\TITLEdragndrop
+
+\begin{tabular}{ll}
+	Drag: 	& \SecRef{Takt} \\
+			& \SecRef{GuiDragNdropAccord}~der \SecRef{TaktString}n \\ 
+	Drop: 	& =Drag
+\end{tabular}
+%
+%
+%
+\MySubSection{Takt-Navigation-Button}{GuiTaktmasterNaviButton}
+Wie erwähnt erfolgt die Navigation zwischen den \SecRef{Takt}en des editierbaren \SecRef{Pattern} per Klick auf den oberen, mit „BAR“ beschrifteten \navibutton~und setzt den jeweilig betätigten zum editierbaren \SecRef{Takt}. Der Wechsel des editierbaren \SecRef{Takt} lädt eine Bande \SecRef{Step}s seiner \SecRef{TaktString}n auf die Nutzeroberfläche (\SecRef{GuiStepElement}) und gibt den Weg zu deren Manipulation frei.
+
+~
+
+Eine gelbe, permanente Markierung des \navibutton~zeigt den Master-Takt an und eine blinkende Markierung den laufenden Takt (siehe \ChapNumRef{Songmode}).
+%
+%
+%
+\MySubSectionSubTitle{FOR-Button}{Taktverkettungs Element (siehe \SecNumRef{GuiChainingFor})}{GuiTaktmasterFor}
+Der linke, schwarze Button in Abb. \ref{fig:_gui_taktmaster_pic} („F1“) zeigt den \SecRef{GuiChainingFor}-Wert des editierbaren Level dieses Taktes an. Weiterhin wird durch Klicken des FOR-Button die Bearbeitung der Level-Parameter des editierbaren Level über den \SecRef{GuiTaktChainEditor} für diesen Takt freigegeben und folglich schwarz markiert.
+
+~
+
+\TITLEshortcut
+
+\begin{tabular}{ll}
+	Mausrad: 			& inkrementiert oder dekrementiert \SecRef{GuiChainingFor}~um 1
+\end{tabular}
+%
+%
+%
+\MySubSectionSubTitle{NEXT-Button}{Taktverkettungs Element (siehe \SecNumRef{GuiChainingNext})}{GuiTaktmasterNext}
+Der rechte, schwarze Button in Abb. \ref{fig:_gui_taktmaster_pic} („AC“) zeigt den \SecRef{GuiChainingNext}-Wert des editierbaren Level dieses Taktes an. Ebenfalls wird durch Betätigung die Bearbeitung der Level-Parameter des editierbaren Level über den \SecRef{GuiTaktChainEditor} für diesen Takt freigegeben und schwarz markiert.
+
+~
+
+\TITLEshortcut
+
+\begin{tabular}{ll}
+	Mausrad: 			& inkrementiert oder dekrementiert \SecRef{GuiChainingNext}~um 1
+\end{tabular}
+%
+%
+%
+\MySubSectionSubTitle{NEXT-LEVEL-Button}{Taktverkettungs Element (siehe \SecNumRef{GuiChainingNextLevel})}{GuiTaktmasterNextLevel}
+Durch Klicken des NEXT-LEVEL-Button wird der editierbare Level der Taktverkettung geändert und der Weg zur Bearbeitung der Level-Parameter über den \SecRef{GuiTaktChainEditor} freigegeben. Angezeigt wird der \SecRef{GuiChainingNextLevel}-Wert des editierbaren Level dieses Taktes.
+
+~
+
+\TITLEshortcut
+
+\begin{tabular}{ll}
+	Mausrad: 			& inkrementiert oder dekrementiert \SecRef{GuiChainingNextLevel}~um 1
+\end{tabular}
+%
+%
+%
+\MySubSection{Taktmaster-Plus-Minus-Buttons}{GuiTaktmasterPlusMinus}
+Einfaches Klicken der \plusminusbutton s inkrementiert bzw. dekrementiert die \SecRef{TaktTransose} einfach. Der eingestellte \SecRef{TaktTransose}-Wert kann dem \SecRef{GuiTaktStringElementMuteButton}en entnommen werden.
+
+~
+
+Eine gelbe Markierung verdeutlicht von welchem Takt die \SecRef{TaktTransose} verwendet wird (siehe \ChapNumRef{Songmode}; \SecNumRef{GuiSongmodeUseDataFrom}).
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Taktstring Element
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Taktsaite-Element}{GuiTaktStringElement}
+\insertGUIpicLabled{\PICGUItaktsaiteelement}{fig:_gui_taktsaite_element_pic}{1}{65}{5}{351}{278}{822}{372}
+Klein aber fein, unter jedem \SecRef{GuiTaktmaster} angebracht, macht sie klar zu wem sie gehört und zeigt \SecRef{TaktTransose} sowie den \SecRef{TaktAccord} an.
+
+Sie hat die Macht, die ganze Rasselbande \SecRef{Step}s, die sie ihr eigen nennt zum Schweigen zu bringen und kann in Kombination mit der \ChapRef{Songmode} für reichlich Abwechslung sorgen.
+
+~
+
+
+\TITLEdragndrop
+
+\begin{tabular}{ll}
+	Drag: 	& \SecRef{TaktString} \\
+	Drop: 	& =Drag
+\end{tabular}
+
+~
+
+\TITLEshortcut
+\begin{tabular}{ll}
+	Mausrad: & in- oder dekrementiert \SecRef{TaktAccord} einfach
+\end{tabular}
+%
+%
+%
+\MySubSection{Taktsaite-Mute-Button}{GuiTaktStringElementMuteButton}	   
+Bei einem grau gefärbten \mutebutton~ist die \SecRef{TaktString} aktiv oder auch nicht mute (schwarz = mute). Betätigung des Button zieht jedes mal eine Invertierung des Mutestatus nach sich.
+
+Der linke Wert der Beschriftung ist die \SecRef{TaktTransose} und der rechte der \SecRef{TaktAccord}. \textit{\nullvalue e werden nicht angezeigt.}
+ 
+~
+
+Durch ein gelbe Markierung wird verdeutlicht ob die Taktsaite zum Master- oder zum laufenden Takt gemutet wird (siehe \ChapNumRef{Songmode}; \SecNumRef{GuiSongmodeUseDataFrom}).
+%
+%
+%
+\MySubSection{Taktsaite-Plus-Minus-Buttons}{GuiTaktStringElementPlusMinusButton}	
+Klicken der \plusminusbutton s inkrementiert bzw. dekrementiert \SecRef{TaktAccord} einfach.
+
+~
+
+\textit{\textbf{Tipp:} Wird auf den \SecRef{PatternAccord} verzichtet (alle \SecRef{GuiPatternStringEditorAccordslider} auf NULL) und nur z.B. \gin EAdgbe\gout~ an den \SecRef{GuiPatternStringEditorTuneslider} eingestellt, kann mit dem \SecRef{TaktAccord} ein Muster vergleichbar mit Gitarren Tabulatoren programmiert und gelesen werden.}
+
+~
+
+\textit{Viel Spaß beim Reengineering ...}
+
+~
+
+Hier zeigt eine gelbe Markierung von welchem Takt der \SecRef{TaktAccord} verwendet wird (siehe \ChapNumRef{Songmode}; \SecNumRef{GuiSongmodeUseDataFrom}).
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Drag'N'Drop
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Drag'n'Drop}{GuiDragNdrop}
+Da sich beim Drag'n'Drop ein paar Dinge außerhalb der normalen Logik bewegen und nicht nur Objekte gleichen Typs zueinander \gin drop\gout-fähig sind, gehen wir etwas detaillierter auf diese ein.
+%
+%
+%
+\MySubSection{Drag'n'Drop-Akkord}{GuiDragNdropAccord}
+Ist eine Zusammenstellung von sechs Werten, welche sich über die sechs Saiten verteilen (z.B. der \SecRef{PatternAccord}).
+
+Als Beispiel kann ein \SecRef{GuiStepmaster} auf einen \SecRef{GuiTaktmaster} gedropt werden und kopiert dabei die \SecRef{StepOffset}s auf die \SecRef{TaktString}n dieses \SecRef{Takt}es, den \SecRef{TaktAccord}.
+%
+%
+%
+\MySubSection{Drag'n'Drop-Stepreihe}{GuiDragNdropSteprow}
+Ein Stepreihe enthält sechs \SecRef{Step}s über die sechs Saiten verteilt.
+Als Beispiel wieder der \SecRef{GuiStepmaster}, welcher in einen anderen \SecRef{GuiStepmaster} die \SecRef{Step}s seines 16tels kopieren/droppen kann.
+%
+%
+%
+\MySubSection{Drag'n'Drop-Pattern}{GuiDragNdropPattern}
+Beim Kopieren eines Pattern zu Pattern via Drag'n'Drop werden keine Daten der \SecRef{PatternString}n kopiert. Somit bleiben also \SecRef{PatternStringTune}, \SecRef{PatternAccord} und MIDI-Einstellungen im Ziel-\SecRef{Pattern} bestehen \textit{(\SecRef{PatternTransose} wird jedoch überschrieben)}.
+%
+%
+%
+\MySubSection{Drag'n'Drop-Clipboard}{GuiDragNdropClipboard}
+Recht einfach ist die Funktion des Clipboard-Feld auf der Benutzeroberfläche, welches Objekte einiger Typen entgegen nimmt und diese später wieder entnommen werden können. Aber das Clipboard legt keine Kopie des Drop-Objektes an, es hält nur einen Verweis und nachfolgende Änderungen am Original wird auch das Clipboard-Objekt erfahren.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Sequencer Control
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Sequenzer Steuerung}{GuiSequencerControl}
+\insertGUIpicLabled{\PICGUIsequencercontrol}{fig:_gui_sequencer_control}{1}{0}{6}{133}{577}{915}{72}
+%
+%
+%
+\MySubSection{Master und Slave Modus}{GuiSequencerControlMasterSlave}
+CYTHAR kann sowohl als Master als auch als Slave betrieben werden. Im Master Modus produziert CYTHAR selbst eine MIDI-Clock und sendet diese an die angeschlossenen Geräte. Im Slave Modus hingegen erwartet CYTHAR eine externe Clock sowie Steuerbefehle wie Start, Stop, Continue und Reset.
+Der Master Modus ist standard aktiviert und um in den Slave Modus zu wechseln wird der „slave“-Button einfach betätigt.
+
+~
+
+\textit{Von welchem Gerät CYTHAR MIDI-Daten im Slave Modus empfängt wird in der MIDI-IN-Gerät Auswahlbox im \SecRef{GUIMidiDevEditor} gesetzt.}
+%
+%
+%
+\MySubSection{Start}{GuiSequencerControlStart}
+Mit dem für \gin play\gout~üblichen Logo versehen, wird der Sequenzer mit dem dritten Button in Abb. \ref{fig:_gui_sequencer_control} gestartet. Dabei wird an alle CYTHAR bekannten, beschreibbaren \LEXmididevice e der MIDI-Befehl START gesendet.
+ 
+Ist CYTHAR pausiert, kann auch mit dem \gin play\gout-Button fortgesetzt werden und CONTINUE wird gesendet.
+%
+%
+%
+\MySubSection{Stopp}{GuiSequencerControlStop}
+Auch CYTHAR's Stopp Quader sollte jedem geläufig sein. Button 5 in Abb. \ref{fig:_gui_sequencer_control} stoppt den Sequenzer und sendet STOP sowie ALL NOTES OFF.
+%
+%
+%
+\MySubSection{Pause}{GuiSequencerControlPause}
+Ohne viele Worte. Button 4 in Abb. \ref{fig:_gui_sequencer_control} pausiert CYTHAR und sendet PAUSE. Ein weiterer Klick setzt fort und sendet CONTINUE.
+%
+%
+%
+\MySubSection{Panik}{GuiSequencerControlPanic}
+Stoppt alle laufenden Noten und sendet ALL NOTES OFF.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Project Control
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Projektverwaltung}{GuiProjectControl}
+Schlicht und einfach, CYTHAR's Projektfile Manager kann nur laden und speichern. Geöffnet wird er über den 1. „eject“-Button in Abb \ref{fig:_gui_sequencer_control}.
+
+~
+
+CYTHAR's Projektverzeichnisse:
+
+\begin{tabular}{ll}
+Linux: &	/usr/share/cythar-projects \\
+Win:   &	C:/Users/nutzername/AppData/Roaming/cythar-projects \\
+Mac:   &    /Users/Shared/cythar-projects
+\end{tabular}
+
+%
+%
+%
+\MySubSection{Neues leeres Projekt}{GuiProjectControlNew}
+Für ein leeres Projekt wird das Beispiel Projekt \gin empty project\gout~geladen. \textit{Wer es überschreibt ist selber schuld ;-).}
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Length Matrix
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MySection{Längematrix}{GuiLengthMatrix}
+\setlength{\unitlength}{4mm}
+\begin{picture}(28,10)
+	\centering
+	{
+		\put(0,6)
+		{
+			% second line
+			\colorbox{white}{\framebox(4,4){4./4}}
+			\colorbox{black}{\framebox(4,4){\color{white}1./4}}		
+			\makebox(4.5,2){}
+			\makebox(4.5,2){}	
+			\makebox(4.5,2){}
+			\colorbox{white}{\framebox(8,4){1./96}}	
+		}
+		\put(0,3.675)
+		{
+			% second line
+			\makebox(4.5,4){}
+			\makebox(4.5,4){}	
+			\colorbox{black}{\framebox(4,4){\color{white}1/8}}
+			\colorbox{black}{\framebox(4,4){\color{white}1/16}}
+			\colorbox{white}{\framebox(4,4){1/32}}
+			\makebox(8,4){}
+		}	
+	
+		\put(0,1.35)
+		{
+			% second line
+			\colorbox{white}{\framebox(4,4){3./4}}
+			\colorbox{black}{\framebox(4,4){\color{white}2./4}}		
+			\makebox(4.5,0){}
+			\makebox(4.5,0){}		
+			\makebox(4.5,4){}
+			\colorbox{white}{\framebox(8,4){2./96}}		
+		}
+	}
+\end{picture}
+
+Simple Addition macht CYTHAR's Matrix für die Angabe der Noten- oder \SecRef{EventLength} zu einem kompakten, detaillierten, leicht lesbaren Anzeiger. Im obigem Beispiel wird wie folgt addiert: 1/4 + 1/4 + 1/8 + 1/16.
+%
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Songmode
+%	
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapterSubTitle{Taktverkettung}{Der Songmode per Pattern}{Songmode}
+Mit der Taktverkettung lassen sich die \SecRef{Takt}e eines \SecRef{Pattern} in eine kompositorische Ordnung bringen. Die Takte können beispielsweise zu Einleitung, Höhepunkt und Schluss verkettet werden. 
+Im \SecRef{GuiAutoChaining}s-Modus hingegen muss man sich um die Taktanordnung keine Gedanken machen, denn CYTHAR übernimmt diese Aufgabe.
+
+~
+
+Für die Taktverkettung stehen je Takt 16 Level zu Verfügung. Je Level wird festgelegt wie oft der Takt wiederholt wird, welcher Takt auf diesen Takt folgt und in welchem Level sich der Folgetakt befinden wird.
+Diese Parameter werden „\SecRef{GuiChainingFor}“, „\SecRef{GuiChainingNext}“ und „\SecRef{GuiChainingNextLevel}“ bezeichnet.
+ 
+~
+
+Beispiel: 
+
+Stellt man in Takt-eins FOR=4, NEXT=2 und NEXT-LEVEL=1 in Level-eins ein, folgt auf Takt-eins Takt-zwei in Level-eins, nachdem Takt-eins vier mal wiederholt wurde. Hat Takt-zwei in Level-eins die Werte FOR=3, NEXT=1 und NEXT-LEVEL=1 folgt wieder Takt-eins nach den drei Takt-zwei-Wiederholungen und man kommt zum Ausgangspunkt von vier Takt-eins-Wiederholungen, mit Takt-zwei als Folge, zurück. Das Ergebnis ist also eine Endlosschleife von 4xTakt-eins, 3xTakt-zwei, 4xTakt-eins, 3xTakt-zwei und so weiter.
+%
+%
+%
+\MySection{Begriffsklärung}{SongNotation}
+\MySubSection{Master-Takt}{SongMasterTakt}
+Der Master-Takt wird fortlaufen erhöht, wenn eine Taktzeit abgelaufen ist. Auf Master-Takt-eins folgt immer zwei, auf zwei folgt drei und auf 16 folgt wieder eins. Der Master-Takt ist vom Nutzer nicht editierbar. 
+
+~
+
+In den \SecRef{GuiTaktmasterNaviButton}s wird der Master-Takt mit einer gelben Markierung fortlaufend dargestellt.
+%
+%
+%
+\MySubSection{Laufender-Takt}{SongRunTakt}
+Der Laufende Takt, seine Taktsaiten und deren Steps sind die tatsächlichen Datenspender für die Berechnung der \SecRef{MidiEvent}-Werte. Er ist NICHT gleich dem \SecRef{SongMasterTakt}, kann aber. 
+
+~
+
+\textit{Mit der \ChapRef{Songmode} wird immer der laufende Takt beeinflusst bzw. der Takt festgelegt, welcher laufender Takt wird.}
+
+~
+
+In den \SecRef{GuiTaktmasterNaviButton}s wird der laufende Takt mit einer gelben, blinkenden Markierung angezeigt.
+
+%
+%
+%
+\MySectionSubTitle{Autoverkettung}{NEXT-Option}{GuiAutoChaining}
+Die Autoverkettung ist eine \SecRef{GuiChainingNext}-Option. Dabei wird der nächste Takt nicht manuell festgelegt und CYTHAR wählt den Folgetakt automatisch. Als Folgetakt werden nur Takte gewählt, welche nicht leer sind. Als nicht leer gilt ein Takt, wenn sich auf einer seiner Taktsaiten ein Step mit einem Velocity-Wert größer null befindet. Dieser Step darf dabei auch deaktiviert sein.
+
+~
+
+Beispiel: 
+
+Befinden sich nur in Takt-eins ein paar Steps oder ein Step mit Velocity größer Null, wird immer nur der Takt-eins wiederholt. Erstellt man nun in Takt-zwei einen Step mit Velocity größer null, wird automatisch Takt-zwei auf eins folgen und dann wieder Takt-eins. Fügt man in Takt-vier noch einen Step ein entsteht folgende Kette: Takt-eins, zwei und vier; eins, zwei und vier... 
+
+~
+
+Der Autoverkettungs-Modus ist standard in allen Level aller Takte eingestellt und wird mit „AC“ im \SecRef{GuiTaktmasterNext} des jeweiligen Level gekennzeichnet.
+%
+%
+%
+\MySectionSubTitle{FOR}{Der FOR-Parameter im Detail}{GuiChainingFor}
+Wie bereits erwähnt legt der FOR fest wie oft ein Takt wiederholt wird (also \SecRef{SongRunTakt} ist) bis über den nachfolgenden Takt entschieden wird. Mögliche Werte sind dabei 1-16 Wiederholungen, endlos „oo“ und null Wiederholungen „X“. Sind null Wiederholungen eingestellt wird umgehend der Folgetakt ausgewählt.
+Im \SecRef{GuiTaktmasterNaviButton} des laufenden Taktes wird der verbleibende FOR-Wert angezeigt und herunter gezählt.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiTaktChainEditorFor}; \SecRef{GuiTaktmasterFor} \\
+	Einflussbereich: 		& dieser Takt \\
+	Minimalwert: 			& 0 = „X“ \\
+	Maximalwert: 			& 16 oder Endlos „oo“ \\
+	Initialisierungswert: 	& 1
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{NEXT}{Der NEXT-Parameter im Detail}{GuiChainingNext}
+NEXT legt den Folgetakt des laufenden Taktes fest. Mögliche Optionen sind absolute Taktangaben 1 bis 16, der bereits beschriebene \SecRef{GuiAutoChaining}s-Mode und gleich-zum-Master Takt „M“.
+
+Ist gleich-zum-Master eingestellt, wird der nächste Takt gleich dem dann aktuellen Master-Takt sein.
+
+~
+
+Beispiel: 
+
+Takt-eins hat die Parameter FOR=4 und NEXT=M, dann wird 4xTakt-eins wiederholt, während sich der Master-Takt auf vier erhöht und somit Takt-fünf auf Takt-eins folgen wird.
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiTaktChainEditorNext}; \SecRef{GuiTaktmasterNext} \\
+	Einflussbereich: 		& Folgetakt \\
+	Minimalwert: 			& 1 \\
+	Maximalwert: 			& 16 \\
+	Spezial:				& „AC“; „M“ \\
+	Initialisierungswert: 	& „AC“
+\end{tabular}
+%
+%
+%
+\MySectionSubTitle{NEXT-LEVEL}{Zusammenfassend, die Level}{GuiChainingNextLevel}
+Um mehrere Verkettung und komplexe Folgen zu erstellen stehen je Takt 16 Verkettungslevel bereit. Je Level können die \SecRef{GuiChainingFor}, \SecRef{GuiChainingNext} und \SecRef{GuiChainingNextLevel} Parameter konfiguriert werden.
+
+~
+
+Am Beispiel:
+
+~
+
+Einstellungen:
+
+Takt 1, Level 1: NEXT=2, NEXT-LEVEL=1
+
+Takt 1, Level 2: NEXT=3, NEXT-LEVEL=1
+
+~
+
+Takt 2, Level 1: NEXT=1, NEXT-LEVEL=2
+
+~
+
+Takt 3, Level 1: NEXT=1, NEXT-LEVEL=1  
+
+~
+\pagebreak
+In Worten:
+
+Mit den oben aufgeführten Einstellungen wird Takt-zwei auf Takt-eins in Level-eins folgen. Auf Takt-zwei folgt wieder eins, jedoch in Level-zwei, worauf auf Takt-eins Takt-drei in Level-eins folgen wird und schließlich wieder auf Takt-eins in Level-eins verweist.
+ 
+Die Folge der Takte: 1 -> 2 -> 1 -> 3; wieder von vorn 1 -> 2 -> 1 -> 3
+
+Die Folge mit Level: T1-L1 -> T2-L1 -> T1-L2 -> T3-L1; ...
+
+~
+
+Standard ist in jedem Level jedes Taktes der Level eins als NEXT-LEVEL gesetzt. Optional kann der Folgelevel bei jedem Aufruf eines Taktes automatisch um eins mit „L++“ erhöht werden. Ist „L++“ eingestellt werden im \SecRef{GuiAutoChaining}s-Mode nur die Level der nicht leeren Takte erhöht. Leere Takte werden ignoriert!
+
+~
+
+\begin{tabular}{ll}
+	Editor: 				& \SecRef{GuiTaktChainEditorNextLevel}; \SecRef{GuiTaktmasterNextLevel} \\
+	Einflussbereich: 		& Level des Folgetakt \\
+	Minimalwert: 			& 1 \\
+	Maximalwert: 			& 16 \\
+	Spezial:				& „L++“ \\
+	Initialisierungswert: 	& 1
+\end{tabular}
+%
+%
+%
+\MySection{Taktverkettung-Editor}{GuiTaktChainEditor}
+\insertGUIpicLabled{\PICGUIstepeditor}{fig:_gui_stepeditor_pic}{1}{0}{16}{293}{305}{863}{100}
+Alle Einstellungen welche mit den Elementen des Taktverkettung-Editor vorgenommen werden beziehen sich auf den editierbaren Level (rote Markierung \SecRef{GuiTaktmasterNextLevel}) und den aktivierten Takt (schwarze Markierung \SecRef{GuiTaktmasterFor} und \SecRef{GuiTaktmasterNext} der Taktmaster).
+%
+%
+%
+\MySubSection{FOR-Regler}{GuiTaktChainEditorFor}
+Editiert \SecRef{GuiChainingFor}.
+%
+%
+%
+\MySubSection{Autoverkettungs-Button}{GuiTaktChainEditorAutoChain}
+Setzt den \SecRef{GuiChainingNext}-Wert auf \SecRef{GuiAutoChaining}.
+%
+%
+%
+\MySubSection{Gleich-zu-Master-Button}{GuiTaktChainEditorEqualMaster}
+Setzt den \SecRef{GuiChainingNext}-Wert auf „gleich-zum-Master“ (siehe \SecNumRef{GuiChainingNext}).
+%
+%
+%
+\MySubSection{NEXT-Regler}{GuiTaktChainEditorNext}
+Editiert \SecRef{GuiChainingNext} für absolute Folgen.
+%
+%
+%
+\MySubSection{Auto-Level-Button}{GuiTaktChainEditorAutoLevel}
+Setzt den \SecRef{GuiChainingNextLevel}-Wert auf „L++“ (siehe \SecNumRef{GuiChainingNextLevel}).
+%
+%
+%
+\MySubSection{NEXT-LEVEL-Regler}{GuiTaktChainEditorNextLevel}
+Editiert \SecRef{GuiChainingNextLevel}.
+%
+%
+%
+\MySubSection{2-All-Button}{GuiTaktChainEditorToAll}
+Ist der „2 all“-Button aktiviert werden alle Einstellungen an den \SecRef{GuiTaktChainEditor}-Elementen an allen Takten im editierbaren Level vorgenommen.
+%
+%
+%
+\MySection{Offsets von Master- oder laufendem Takt}{GuiSongmodeUseDataFrom}
+\insertGUIpicLabled{\PICGUIquestmark}{fig:_usedata_gui_pic}{1}{65}{3}{865}{322}{296}{300}
+Um die ganze Sache abzurunden wird mit den \usedatebutton s ausgewählt ob \SecRef{TaktAccord}, \SecRef{TaktString}-Mute oder \SecRef{TaktTransose} in Abhängigkeit von \SecRef{SongRunTakt} oder des \SecRef{SongMasterTakt}s für die Berechnung der \SecRef{MidiEvent}-Daten verwendet werden.
+
+\textbf{\textit{Die \SecRef{Step}-Daten werden immer vom laufenden Takt heran gezogen!}}
+
+~
+
+\textbf{Aufstellung der \usedatebutton~ Belegung}
+
+\setlength{\unitlength}{8mm}
+\begin{picture}(30,6)
+	\centering
+	{
+		\put(0,3.5)
+		{
+			% second line
+			\colorbox{white}{\framebox(6,2){\begin{small}
+												\SecRef{TaktTransose} per 
+												Master
+											\end{small}}}
+			\colorbox{gray}{\framebox(6,2){\color{white}\begin{small}
+												\SecRef{TaktString}-Mute per 
+												Master
+											\end{small}}}		
+			\colorbox{white}{\framebox(6,2){\begin{small}
+												\SecRef{TaktAccord} per 
+												Master
+											\end{small}}}
+		}
+		\put(0,0.5)
+		{
+			\colorbox{gray}{\framebox(6,2){\color{white}\begin{small}
+												\SecRef{TaktTransose} per 
+												Laufend
+											\end{small}}}
+			\colorbox{white}{\framebox(6,2){\begin{small}
+												\SecRef{TaktString}-Mute per 
+												Laufend
+											\end{small}}}
+			\colorbox{gray}{\framebox(6,2){\color{white}\begin{small}
+												\SecRef{TaktAccord} per 
+												Laufend
+											\end{small}}}
+		}	
+	}
+\end{picture}
+
+\textit{In Abb. \ref{fig:_usedata_gui_pic} bzw. im Schema wird \SecRef{TaktString}-Mute per \SecRef{SongMasterTakt} verwendet und der Rest per \SecRef{SongRunTakt}.}
+
+~
+
+Per Voreinstellung werden die \SecRef{MidiEvent}-Daten in Abhängigkeit des \SecRef{SongMasterTakt}s verwendet.
+
+~
+
+\textit{Wenn während der Arbeit mal wieder der Verwendungszweck der Buttons entfallen ist kann eine ausführlichere Info als Tooltip, durch überfahren und halten der Maus über den Buttons, gewonnen werden.} 
+
+\textit{Weiterhin wird in den \SecRef{GuiTaktmasterPlusMinus} der momentane Bezug der \SecRef{TaktTransose} markiert. Für den verwendeten \SecRef{TaktAccord} werden die \SecRef{GuiTaktStringElementPlusMinusButton} markiert und für Taktsaite-Mute die \SecRef{GuiTaktStringElementMuteButton}. }
+%	
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Rebeca
+%	
+%
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\MyChapterSubTitle{Rebeca}{Repeat, but be careful!}{Rebeca}
+\insertGUIpicLabled{\PICGUIrebeca}{fig:_gui_rebeca_pic}{1}{0}{15}{913}{375}{125}{109}
+Alle Änderungen in Rebeca beziehen sich auf den editierbaren \SecRef{Step}, da die \SecRef{Step}s Eigentümer aller Rebeca-Werte sind.
+
+Vorab ist noch zu nennen, dass Rebeca über drei Reiter (NOTE, VELOCITY und LENGTH) verfügt, auf die in Pkt. \SecRef{GuiRebecaOriginal} näher eingegangen wird. Unabhängig von Reiterwahl repräsentiert \SecRef{GuiRebecaDelay} und \SecRef{GuiRebecaRepeat} immer die gleichen Werte.
+%
+%
+%
+\MySectionSubTitle{Delay}{Shuffle}{GuiRebecaDelay}
+Im Delay Feld kann der Zeitpunkt des \SecRef{MidiEvent} des editierbaren \SecRef{Step} um den eingegebenen Betrag in Clocksteps zum eigentlichen 16tel-Rasterpunkt des \SecRef{Step} verzögert werden \textit{(Info über einen Wert größer Null ist im \SecRef{GuiStepElementButton} zu finden)}.
+%
+%
+%
+\MySection{Repeat}{GuiRebecaRepeat}
+Der Repeat-Wert gibt an, wie oft das \SecRef{MidiEvent} des \SecRef{Step}~tatsächlich wiedergeben wird. Dabei entspricht null einer Wiedergabe mit den \SecRef{MidiEvent}-Daten des \SecRef{Step}s.
+
+Da dies noch relativ sinnfrei ist können die Wiederholungen manipuliert werden.
+%
+%
+%
+\MySection{Manipulation}{GuiRebecaIntro}
+Wem das gesamte Vorspiel noch nicht begeistern konnte, kann nun zur Sache kommen und wilde Dinge testen. Denn das Highlight von Rebeca ist die Manipulation der \SecRef{MidiEvent}-Werte je Wiederholungen (\SecRef{GuiRebecaRepeat}) des \SecRef{Step}s, um ohne viel Aufwand mit jeder Menge \SecRef{MidiEvent}s um sich zu ballern.
+
+Bevor wir uns mit den einfachen Rechenoperationen zur Manipulation beschäftigen, sollte klar sein wie die Teilnehmer einer Berechnung bezeichnet werden. Wir benennen den linken Teilnehmer einer Rechenoperation einfach linker Operand (kurz lO). Der Operator (Op) legt die Operation fest mit der der rechte Operand (rO) zum linken Operand gerechnet wird. Am Beispiel einer einfachen Addition mit lO=1, Op=+ und rO=2 ergibt das 1+2.
+
+~
+
+Ähm, irgendwas geteilt durch Null ist gleich? Alles klar, bei Rebeca ist das Null. Dann mal los zur Beispielerläuterung \SecRef{GuiRebecaInterval}.
+%
+%
+%
+\MySubSection{Schema der Eingabefelder}{GuiRebecaScheme}
+\setlength{\unitlength}{4mm}
+\begin{picture}(30,15)
+	\put(0,13)
+	{
+		% first line
+		\framebox(10,2){\SecRef{GuiRebecaDelay}}
+		\makebox(10,2){}		
+		\framebox(10,2){\SecRef{GuiRebecaRepeat}}	
+	}
+	\put(0,9)
+	{
+		% second line
+		\framebox(10,2){\SecRef{GuiRebecaInterval}}
+		\framebox(10,2){\SecRef{GuiRebecaIntervalOperator}}		
+		\framebox(10,2){\SecRef{GuiRebecaIntervalOperand}}		
+	}
+	\put(0,6.7)
+	{
+		\makebox(10,2){}
+		\makebox(10,2){}		
+		\framebox(10,2){Original 2 Intervall (Op)}	
+	}
+	\put(0,4.4)
+	{
+		\framebox(10,2){\SecRef{GuiRebecaOriginal}}
+		\framebox(10,2){\SecRef{GuiRebecaOriginalOperator}}		
+		\framebox(10,2){\SecRef{GuiRebecaOriginalOperand}}	
+	}
+	
+	\put(0,0.1)
+	{
+		\framebox(3,2){fit}
+		\framebox(17,2){\SecRef{GuiRebecaResults}}		
+		\framebox(10,2){Org-Int 2 Repeat (Op)}	
+	}
+\end{picture}
+%
+%
+%
+\MySubSectionSubTitle{Intervall}{Linker Operand}{GuiRebecaInterval}
+Intervall ist der Startzeitpunkt der ersten Wiederholung absolut zum 16tel-Rasterpunkt an dem sich der \SecRef{Step} befindet.
+
+Je Wiederholung wird \SecRef{GuiRebecaIntervalOperand} mit dem \SecRef{GuiRebecaIntervalOperator} auf das Ergebnis der vorherigen Operation oder bei der ersten Wiederholung auf das Intervall selbst gerechnet. Das Resultat jeder Operation ist die Verzögerung des \SecRef{MidiEvent} jeweiliger Wiederholung zum 16tel-Rasterpunkt des Original-Step (wie bei \SecRef{GuiRebecaDelay}).
+
+~
+
+Am Beispiel mit 20 Wiederholungen könnte ein wiederholtes, perkussives Instrument wie ein Butterdeckel in Fahrradspeichen klingen (kennt doch jeder?).
+
+\begin{tabular}{ll}
+lO &= 2\\
+Op &= +\\
+rO &= 4\\
+\\
+Ergebnis für Intervall/Delay je Wiederholung & = 2, 6, 10, 14, 18...
+\end{tabular}
+
+~
+
+Das Resultat kann in der \SecRef{GuiRebecaResults} ausgelesen werden. Das Intervall bzw. das Delay jeder Wiederholung bildet den ersten Eintrag je Zeile.  
+%
+%
+%
+\MySubSection{Intervall-Operator}{GuiRebecaIntervalOperator}
+Operation zwischen \SecRef{GuiRebecaInterval} und \SecRef{GuiRebecaIntervalOperand}.
+%
+%
+%
+\MySubSectionSubTitle{Intervall-Operand}{Rechter Operand}{GuiRebecaIntervalOperand}
+Rechter Operand zu \SecRef{GuiRebecaInterval}.
+%
+%
+%
+\MySubSectionSubTitle{Original}{Linker Operand}{GuiRebecaOriginal}
+Wem es noch immer nicht reicht kann richtig ans Eingemachte gehen. In Rebeca kann auch \SecRef{StepOffset}, \SecRef{EventVelocity} und \SecRef{EventLength} manipuliert werden. Für \SecRef{StepOffset} steht der Reiter NOTE bereit, für \SecRef{EventVelocity} VELOCITY und für \SecRef{EventLength} LENGTH.
+
+Die Berechnungen erfolgen jeweils, gleich wie in \SecRef{GuiRebecaInterval} beschrieben, zwischen \SecRef{GuiRebecaOriginal} und \SecRef{GuiRebecaOriginalOperand}. \textit{Eine Ausnahme hier: der Original-Wert ist nicht in Rebeca änderbar und wird nur gelistet!}
+
+~
+
+Die Resultate repräsentieren die zweite Spalte der \SecRef{GuiRebecaResults} und sind dem Intervall-Ergebnis nachgestellt.
+%
+%
+%
+\MySubSection{Original-Operator}{GuiRebecaOriginalOperator}
+Operation zwischen \SecRef{GuiRebecaOriginal} und \SecRef{GuiRebecaOriginalOperand}.
+%
+%
+%
+\MySubSectionSubTitle{Original-Operand}{Rechter Operand}{GuiRebecaOriginalOperand}
+Rechter Operand zu \SecRef{GuiRebecaOriginal}~.
+%
+%
+%
+\MySubSectionSubTitle{Original-Ergebnis-zu-Intervall-Ergebnis}{Operator}{GuiRebecaOriginal2IntervalOperator}
+Auch noch nicht satt? Zwei haben wir noch...
+
+Wieder nach gleichem Schema wie in \SecRef{GuiRebecaInterval} werden die Ergebnisse von Original und Intervall verrechnet. Original ist dabei lO und Intervall rO und das Resultat geht zu Lasten einer der drei gewählten \SecRef{MidiEvent}-Wert-Manipulationen (NOTE, VELOCITY oder LENGTH).
+
+~
+
+Zugegeben wird der Überschlag im Kopf nun etwas aufwendiger und es wird erneut auf die zweite Spalte der \SecRef{GuiRebecaResults}~verwiesen.
+%
+%
+%
+\MySubSectionSubTitle{Original-Intervall-Ergebnis-zu-Repeat}{Operator}{GuiRebecaOriginalInterval2RepeatOperator}
+Jetzt noch etwas nach schminken und dann raus damit.
+
+Genau nach dem gleichen Motto wie die Vorgänger, zu Lasten der \SecRef{MidiEvent}-Wert-Manipulationen wird der \SecRef{GuiRebecaRepeat} als rO zum Ergebnis von \SecRef{GuiRebecaOriginal2IntervalOperator} gerechnet und ist in Spalte zwei der \SecRef{GuiRebecaResults} nachzuschlagen.
+%
+%
+%
+\MySubSectionSubTitle{Resultbox}{Kopfrechenfaul?}{GuiRebecaResults}
+Listet die Resultate der Original- und Intervall-Manipulationen je \SecRef{GuiRebecaRepeat}. Werte welche die Sollwerte überschreiten sind rot markiert (wenn der \SecRef{GuiRebecaFit} deaktiviert). 
+
+~
+
+In der linken Spalte findet sich die Eventverzögerung und rechts die Manipulationsergebnisse je \SecRef{GuiRebecaRepeat}.
+%
+%
+%
+\MySubSectionSubTitle{Fit-Button}{Funktion}{GuiRebecaFit}
+Um Rebeca etwas in die Schranken zu weisen ist die Fit-Funktion standardmäßig aktiviert und passt Werte, welche das Soll verlassen auf das Maximum oder Minimum an. Ist Fit deaktiviert werden bereichsüberschreitende Ergebnisse in der \SecRef{GuiRebecaResults} rot markiert und es erfolgt kein \SecRef{MidiEvent} zu diesem Wiederholungsschritt.
+%
+%
+%
+\MySubSection{Presets}{GuiRebecaPreset}
+In vier Spalten zu je zwei Reihen bietet Rebeca acht einfache Presets an, welche gut zum Testen oder für den Liveeinsatz taugen.
+
+~
+
+Button Anordnung und Funktion:
+
+\begin{tabular}{lllll}
+	& \textit{\textbf{Intervall}}	& \textit{\textbf{\SecRef{EventNote}}}	& \textit{\textbf{\SecRef{EventVelocity}}} 	& \textit{\textbf{\SecRef{EventLength}}} \\
+	oben & vergrößert („int+“) 			& Dreiklang Dur („maj“) 		& erhöht („vel+“) 					& verlängert („len+“)\\
+	unten & verkleinert	(„int-“)		& Dreiklang Moll („min“) 		& vermindert („vel-“)				& verkürzt („len-“)
+\end{tabular}
+%
+%
+%
+\MySubSection{Verfügbare Operatoren}{GuiRebecaOperators}
+Je sechs Operator stehen für jede Rebeca Operation zur Verfügung.
+
+~
+
+\begin{tabular}{ll}
+not			& keine Operation (lO wird verwendet) \\
++, -, *, /	& \\
+{\%}			& Modulo
+\end{tabular}
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\end{document}

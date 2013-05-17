@@ -1,0 +1,886 @@
+# depslib dependency file v1.0
+1364481692 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/3th_party/rtmidi-2.0.1/RtMidi.cpp
+	"rtmidi-2.0.1/RtMidi.h"
+	<sstream>
+	<CoreMIDI/CoreMIDI.h>
+	<CoreAudio/HostTime.h>
+	<CoreServices/CoreServices.h>
+	<unistd.h>
+	<pthread.h>
+	<sys/time.h>
+	<alsa/asoundlib.h>
+	<windows.h>
+	<mmsystem.h>
+	<string>
+	<vector>
+	<memory>
+	<stdexcept>
+	<sstream>
+	<windows.h>
+	<setupapi.h>
+	<mmsystem.h>
+	"ks.h"
+	"ksmedia.h"
+	<jack/jack.h>
+	<jack/midiport.h>
+	<jack/ringbuffer.h>
+
+1341587104 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/3th_party/rtmidi-2.0.1/RtMidi.h
+	"RtError.h"
+	<string>
+	<vector>
+
+1338824524 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/3th_party/rtmidi-2.0.1/RtError.h
+	<exception>
+	<iostream>
+	<string>
+
+1366979264 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_filemanager.moced.cpp
+	"../dc_gui_filemanager.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_filemanager.2moc.h
+	<dc_gui_filemanager.uiced.h>
+	<pattern/singleton.hpp>
+	<stuff/blockguard.h>
+	<vector>
+	<string>
+
+1366979264 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_filemanager.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QGridLayout>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QScrollArea>
+	<QtGui/QVBoxLayout>
+	<QtGui/QWidget>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/pattern/singleton.hpp
+	<dc_log_informations.h>
+	<class/properties.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_log_informations.h
+	<string>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/class/properties.hpp
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/stuff/blockguard.h
+	<class/properties.hpp>
+
+1368173126 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_mainwindow.moced.cpp
+	"../dc_gui_mainwindow.2moc.h"
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_mainwindow.2moc.h
+	<dc_gui_mainwindow.uiced.h>
+	<dc_gui_mainwindow_clipboard.uiced.h>
+	<dc_gui_mainwindow_questmark.uiced.h>
+	<pattern/singleton.hpp>
+	<stuff/blockguard.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<dc_gui_styles.h>
+	<extendQt_exclusive_box.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<dc_documentation.h>
+	<dc_ticker_generator.h>
+
+1368173126 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_mainwindow.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QDial>
+	<QtGui/QFrame>
+	<QtGui/QGridLayout>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QSlider>
+	<QtGui/QWidget>
+
+1368173126 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_mainwindow_clipboard.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1368173126 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_mainwindow_questmark.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_objectstructure.h
+	<dc_standard_types.h>
+	<dc_standard_values.h>
+	<uniques.hpp>
+	<objectstructure.h>
+	<pattern/singleton.hpp>
+	<class/properties.hpp>
+	<string>
+	<object_step.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_standard_types.h
+	<stdint.h>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_standard_values.h
+	<dc_standard_types.h>
+	<string>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uniques.hpp
+	<class/properties.hpp>
+	<uniques_this_app.h>
+	<array>
+	<stdint.h>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uniques_this_app.h
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/objectstructure.h
+	<stdint.h>
+	<set>
+	<tuple>
+	<type_traits>
+	<array>
+	<map>
+	<vector>
+	<iostream>
+	<loki/TypeManip.h>
+	<pattern/singleton.hpp>
+	<mutex>
+	<objectstructure.hpp>
+
+1161114566 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/3th_party/loki/TypeManip.h
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/objectstructure.hpp
+	<cast/lexical_cast.hpp>
+	<functions/invert.hpp>
+	<iostream>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/cast/lexical_cast.hpp
+	<boost/lexical_cast.hpp>
+	<type_traits>
+	<loki/TypeManip.h>
+	<stdint.h>
+	<sstream>
+	<dc_log_informations.h>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/functions/invert.hpp
+	<iostream>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/object_step.hpp
+	<dc_standard_types.h>
+	<dc_standard_values.h>
+	<uniques.hpp>
+	<tuple>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_objectobserver.h
+	<objectobserver.h>
+	<dc_objectstructure.h>
+	<dc_gui_inits.h>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/objectobserver.h
+	<objectobserver.scm.h>
+	<objectstructure.h>
+	<iostream>
+	<objectobserver.hpp>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/objectobserver.scm.h
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/objectobserver.hpp
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_inits.h
+	<stdint.h>
+	<cast/lexical_cast.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_styles.h
+	<pattern/singleton.hpp>
+	<QCleanlooksStyle>
+	<QMotifStyle>
+	<QColor>
+	<QWidget>
+
+1353665393 /usr/include/QtGui/QCleanlooksStyle
+	"qcleanlooksstyle.h"
+
+1353665393 /usr/include/QtGui/qcleanlooksstyle.h
+	<QtGui/qwindowsstyle.h>
+
+1353665393 /usr/include/QtGui/QMotifStyle
+	"qmotifstyle.h"
+
+1353665393 /usr/include/QtGui/qmotifstyle.h
+	<QtGui/qcommonstyle.h>
+	<QtCore/qpointer.h>
+
+1353665393 /usr/include/QtGui/QColor
+	"qcolor.h"
+
+1353665393 /usr/include/QtGui/qcolor.h
+	<QtGui/qrgb.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstringlist.h>
+
+1353665393 /usr/include/QtGui/QWidget
+	"qwidget.h"
+
+1353665393 /usr/include/QtGui/qwidget.h
+	<QtGui/qwindowdefs.h>
+	<QtCore/qobject.h>
+	<QtCore/qmargins.h>
+	<QtGui/qpaintdevice.h>
+	<QtGui/qpalette.h>
+	<QtGui/qfont.h>
+	<QtGui/qfontmetrics.h>
+	<QtGui/qfontinfo.h>
+	<QtGui/qsizepolicy.h>
+	<QtGui/qregion.h>
+	<QtGui/qbrush.h>
+	<QtGui/qcursor.h>
+	<QtGui/qkeysequence.h>
+	<QtGui/qplatformwindowformat_qpa.h>
+	<QtGui/qevent.h>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/extendQt_exclusive_box.h
+	<map>
+	<array>
+	<stddef.h>
+	<QWidget>
+	<QPushButton>
+	<extendQt_exclusive_box.hpp>
+
+1353665393 /usr/include/QtGui/QPushButton
+	"qpushbutton.h"
+
+1353665393 /usr/include/QtGui/qpushbutton.h
+	<QtGui/qabstractbutton.h>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/extendQt_exclusive_box.hpp
+	<iostream>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/extendQt_drag_n_drop.2moc.h
+	<uniques.hpp>
+	<class/properties.hpp>
+	<dc_standard_values.h>
+	<dc_objectstructure.h>
+	<QWidget>
+	<QDrag>
+	<QMouseEvent>
+	<QDragEnterEvent>
+	<QDropEvent>
+	<QMimeData>
+	<QPixmap>
+	<QString>
+	<QList>
+	<QUrl>
+	<array>
+	<iostream>
+
+1353665393 /usr/include/QtGui/QDrag
+	"qdrag.h"
+
+1353665393 /usr/include/QtGui/qdrag.h
+	<QtCore/qobject.h>
+
+1353665393 /usr/include/QtGui/QMouseEvent
+	"qevent.h"
+
+1353665393 /usr/include/QtGui/qevent.h
+	<QtGui/qwindowdefs.h>
+	<QtCore/qobject.h>
+	<QtGui/qregion.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtGui/qkeysequence.h>
+	<QtCore/qcoreevent.h>
+	<QtGui/qmime.h>
+	<QtGui/qdrag.h>
+	<QtCore/qvariant.h>
+	<QtCore/qmap.h>
+	<QtCore/qset.h>
+	<QtCore/qfile.h>
+
+1353665393 /usr/include/QtGui/QDragEnterEvent
+	"qevent.h"
+
+1353665393 /usr/include/QtGui/QDropEvent
+	"qevent.h"
+
+1353665393 /usr/include/QtCore/QMimeData
+	"qmimedata.h"
+
+1353665395 /usr/include/QtCore/qmimedata.h
+	<QtCore/qvariant.h>
+	<QtCore/qobject.h>
+
+1353665393 /usr/include/QtGui/QPixmap
+	"qpixmap.h"
+
+1353665393 /usr/include/QtGui/qpixmap.h
+	<QtGui/qpaintdevice.h>
+	<QtGui/qcolor.h>
+	<QtCore/qnamespace.h>
+	<QtCore/qstring.h>
+	<QtCore/qsharedpointer.h>
+	<QtGui/qimage.h>
+	<QtGui/qtransform.h>
+
+1353665393 /usr/include/QtCore/QString
+	"qstring.h"
+
+1353665395 /usr/include/QtCore/qstring.h
+	<QtCore/qchar.h>
+	<QtCore/qbytearray.h>
+	<QtCore/qatomic.h>
+	<QtCore/qnamespace.h>
+	<Qt3Support/q3cstring.h>
+	<string>
+	<stdarg.h>
+	<QtCore/qstringbuilder.h>
+
+1353665393 /usr/include/QtCore/QList
+	"qlist.h"
+
+1361284840 /usr/include/QtCore/qlist.h
+	<QtCore/qiterator.h>
+	<QtCore/qatomic.h>
+	<QtCore/qalgorithms.h>
+	<iterator>
+	<list>
+	<iterator>
+	<initializer_list>
+	<new>
+	<limits.h>
+	<string.h>
+
+1353665393 /usr/include/QtCore/QUrl
+	"qurl.h"
+
+1353665395 /usr/include/QtCore/qurl.h
+	<QtCore/qbytearray.h>
+	<QtCore/qobjectdefs.h>
+	<QtCore/qpair.h>
+	<QtCore/qstring.h>
+	<QtCore/qhash.h>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_documentation.h
+	<string>
+	<QDir>
+	<iostream>
+
+1353665393 /usr/include/QtCore/QDir
+	"qdir.h"
+
+1353665395 /usr/include/QtCore/qdir.h
+	<QtCore/qstring.h>
+	<QtCore/qfileinfo.h>
+	<QtCore/qstringlist.h>
+	<QtCore/qshareddata.h>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_ticker_generator.h
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<pattern/singleton.hpp>
+	<stddef.h>
+	<crossplatt_threading.hpp>
+	<dc_ticker_generator.hpp>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/crossplatt_threading.hpp
+	<class/properties.hpp>
+	<iostream>
+	<boost/thread.hpp>
+	<windows.h>
+	<ctime>
+	<cstdio>
+	<boost/signals2/mutex.hpp>
+	<chrono>
+	<thread>
+	<mutex>
+	<unistd.h>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_ticker_generator.hpp
+	<dc_midi_sequencer.h>
+	<midi_ports.h>
+	<dc_midi_message.h>
+	<dc_midi_message_factory.h>
+	<crossplatt_threading.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_sequencer.h
+	<pattern/singleton.hpp>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<dc_midi_sequencer.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_sequencer.hpp
+	<dc_midi_sequencer_timer.h>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_sequencer_timer.h
+	<class/properties.hpp>
+	<pattern/singleton.hpp>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<object_dependstrategy.h>
+	<array>
+	<dc_midi_sequencer_timer.hpp>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/object_dependstrategy.h
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_sequencer_timer.hpp
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/midi_ports.h
+	<string>
+	<map>
+	<array>
+	<cast/lexical_cast.hpp>
+	<rtmidi-2.0.1/RtMidi.h>
+	<pattern/singleton.hpp>
+	<dc_log_informations.h>
+	<gm_midistandard.h>
+	"midi_ports.hpp"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/gm_midistandard.h
+	<stdint.h>
+	<array>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/midi_ports.hpp
+	<crossplatt_threading.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_message.h
+	<gm_midistandard.h>
+	<stdint.h>
+	<class/properties.hpp>
+	<pattern/singleton.hpp>
+	<vector>
+	<set>
+	<loki/TypeManip.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<dc_midi_message.hpp>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_message.hpp
+	<midi_ports.h>
+	<iostream>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_message_factory.h
+	<pattern/singleton.hpp>
+	<dc_midi_message.h>
+	<dc_midi_sequencer_timer.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<dc_midi_message_factory.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_midi_message_factory.hpp
+	<stdint.h>
+	<dc_midi_message.h>
+	<dc_midi_sequencer_timer.h>
+	<dc_algorithm_rebeca.hpp>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_algorithm_rebeca.hpp
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<stddef.h>
+	<vector>
+	<iostream>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_midideviceeditor.moced.cpp
+	"../dc_gui_midideviceeditor.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_midideviceeditor.2moc.h
+	<dc_gui_midideviceeditormaster.uiced.h>
+	<dc_gui_midideviceeditor.uiced.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<stuff/functions.h>
+	<guistuff/child_initializer.h>
+	<stuff/blockguard.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<midi_ports.h>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_midideviceeditormaster.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QComboBox>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_midideviceeditor.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QComboBox>
+	<QtGui/QHeaderView>
+	<QtGui/QWidget>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/stuff/functions.h
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/guistuff/child_initializer.h
+	<QFrame>
+	<QDesktopWidget>
+
+1353665393 /usr/include/QtGui/QFrame
+	"qframe.h"
+
+1353665393 /usr/include/QtGui/qframe.h
+	<QtGui/qwidget.h>
+
+1353665393 /usr/include/QtGui/QDesktopWidget
+	"qdesktopwidget.h"
+
+1353665393 /usr/include/QtGui/qdesktopwidget.h
+	<QtGui/qwidget.h>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_patternmaster.moced.cpp
+	"../dc_gui_patternmaster.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_patternmaster.2moc.h
+	<dc_gui_patternmaster.uiced.h>
+	<stuff/blockguard.h>
+	<guistuff/child_initializer.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<QTimer>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_patternmaster.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QDial>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1353665393 /usr/include/QtCore/QTimer
+	"qtimer.h"
+
+1353665395 /usr/include/QtCore/qtimer.h
+	<QtCore/qbasictimer.h>
+	<QtCore/qobject.h>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_patternsaite_mute.moced.cpp
+	"../dc_gui_patternsaite_mute.2moc.h"
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_patternsaite_mute.2moc.h
+	<dc_gui_patternsaite_mute.uiced.h>
+	<class/properties.hpp>
+	<stuff/blockguard.h>
+	<guistuff/child_initializer.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<QTimer>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_patternsaite_mute.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QDial>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1367066886 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_rebeca.moced.cpp
+	"../dc_gui_rebeca.2moc.h"
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_rebeca.2moc.h
+	<dc_gui_rebeca.uiced.h>
+	<guistuff/child_initializer.h>
+	<stuff/blockguard.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<class/properties.hpp>
+	<dc_algorithm_rebeca.hpp>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+
+1367066886 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_rebeca.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QComboBox>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QLineEdit>
+	<QtGui/QPushButton>
+	<QtGui/QSpinBox>
+	<QtGui/QWidget>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_step.moced.cpp
+	"../dc_gui_step.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_step.2moc.h
+	<dc_gui_step.uiced.h>
+	<dc_gui_step_velocity.2moc.h>
+	<dc_gui_step_matrix.2moc.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<guistuff/child_initializer.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<QWheelEvent>
+	<QMouseEvent>
+	<dc_gui_mainwindow.2moc.h>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_step.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_step_velocity.2moc.h
+	<dc_gui_step_velocity.uiced.h>
+	<class/properties.hpp>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_step_velocity.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QWidget>
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_step_matrix.2moc.h
+	<dc_gui_step_matrix.uiced.h>
+	<class/properties.hpp>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_step_matrix.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QWidget>
+
+1353665393 /usr/include/QtGui/QWheelEvent
+	"qevent.h"
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_step_matrix.moced.cpp
+	"../dc_gui_step_matrix.2moc.h"
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_step_velocity.moced.cpp
+	"../dc_gui_step_velocity.2moc.h"
+
+1367066880 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_stepeditor.moced.cpp
+	"../dc_gui_stepeditor.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_stepeditor.2moc.h
+	<dc_gui_stepeditor.uiced.h>
+	<guistuff/child_initializer.h>
+	<stuff/blockguard.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<dc_alg_lengthmatrix.h>
+	<extendQt_drag_n_drop.2moc.h>
+
+1367066880 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_stepeditor.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QSlider>
+	<QtGui/QSpinBox>
+	<QtGui/QWidget>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_alg_lengthmatrix.h
+	<class/properties.hpp>
+	<array>
+	<dc_alg_lengthmatrix.hpp>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_alg_lengthmatrix.hpp
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_stepmaster.moced.cpp
+	"../dc_gui_stepmaster.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_stepmaster.2moc.h
+	<dc_gui_stepmaster.uiced.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<guistuff/child_initializer.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_stepmaster.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1367141066 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_taktmaster.moced.cpp
+	"../dc_gui_taktmaster.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_taktmaster.2moc.h
+	<dc_gui_taktmaster.uiced.h>
+	<dc_gui_taktchain.uiced.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<dc_export_takt.h>
+	<stuff/blockguard.h>
+	<guistuff/child_initializer.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<object_dependstrategy.h>
+	<QTimer>
+
+1367141066 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_taktmaster.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1367141066 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_taktchain.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_export_takt.h
+	<string>
+	<cast/lexical_cast.hpp>
+	<class/properties.hpp>
+	<dc_standard_types.h>
+	<gm_midistandard.h>
+
+1367232142 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_taktsaite.moced.cpp
+	"../dc_gui_taktsaite.2moc.h"
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_taktsaite.2moc.h
+	<dc_gui_taktsaite.uiced.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<guistuff/child_initializer.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+	<dc_gui_styles.h>
+	<dc_midi_sequencer_timer.h>
+	<QWheelEvent>
+
+1367232142 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_taktsaite.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_taktsaite_mute.moced.cpp
+	"../dc_gui_taktsaite_mute.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_taktsaite_mute.2moc.h
+	<dc_gui_taktsaite_mute.uiced.h>
+	<guistuff/child_initializer.h>
+	<class/properties.hpp>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_taktsaite_mute.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_taktsaite_velocity.moced.cpp
+	"../dc_gui_taktsaite_velocity.2moc.h"
+
+1368792010 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_taktsaite_velocity.2moc.h
+	<dc_gui_taktsaite_velocity.uiced.h>
+	<guistuff/child_initializer.h>
+	<class/properties.hpp>
+
+1366134914 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_taktsaite_velocity.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QDial>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1367066878 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/dc_gui_tuneslidereditor.moced.cpp
+	"../dc_gui_tuneslidereditor.2moc.h"
+
+1368792011 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/dc_gui_tuneslidereditor.2moc.h
+	<dc_gui_tuneslider.uiced.h>
+	<dc_gui_tuneslidereditor.uiced.h>
+	<dc_gui_tunevaluebox.uiced.h>
+	<extendQt_drag_n_drop.2moc.h>
+	<guistuff/child_initializer.h>
+	<stuff/blockguard.h>
+	<dc_objectstructure.h>
+	<dc_objectobserver.h>
+
+1367066878 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_tuneslider.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QHeaderView>
+	<QtGui/QSlider>
+	<QtGui/QWidget>
+
+1367066878 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_tuneslidereditor.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QFrame>
+	<QtGui/QHBoxLayout>
+	<QtGui/QHeaderView>
+	<QtGui/QLabel>
+	<QtGui/QPushButton>
+	<QtGui/QSlider>
+	<QtGui/QWidget>
+
+1367066878 /mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/uiced/dc_gui_tunevaluebox.uiced.h
+	<QtCore/QVariant>
+	<QtGui/QAction>
+	<QtGui/QApplication>
+	<QtGui/QButtonGroup>
+	<QtGui/QHeaderView>
+	<QtGui/QPushButton>
+	<QtGui/QWidget>
+
+1366134914 source:/mnt/29846cf7-d970-4845-b91b-3261d0e94f0c/Development/Projects/dasticcythar/moced/extendQt_drag_n_drop.moced.cpp
+	"../extendQt_drag_n_drop.2moc.h"
+
