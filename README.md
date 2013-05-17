@@ -1,17 +1,29 @@
-CYTHAR-Sequenzer
-================
+# CYTHAR-Sequenzer
 
 A pattern-oriented, polyphonic MIDI step-sequencer, which makes its own path.
 web: www.cythar.sequenzer.org
 
 
 
-LICENCE
+# LICENCE
 
 This software are licensed under the GNU GPL version 3. See the file COPYING for details.
 
+# BUILDING
 
-NOTES
+For now we have an ad-hoc script. Just type
+
+<pre>
+sh build.sh
+</pre>
+
+to build the project. Once it has finished without error an executable called cythar should have been created. Just run that with
+
+<pre>
+./cythar
+</pre>
+
+# NOTES
 
 I have only used code blocks (dasticcythar.cbp) - no make script.
 Targets are defined for Linux, Windows and Mac.
