@@ -25,8 +25,8 @@ to build the project. Once it has finished without error an executable called cy
 
 # NOTES
 
-CYTHAR is my first project and i know that the code is not clean. But it's working :-).
-It's time for a refactoring now!
+CYTHAR is my first big project and i know that the code is not clean. But it's working :-).
+A complete refactoring is still in work -> branch refactoring .
 
 
 Any help is welcome!
