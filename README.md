@@ -26,7 +26,8 @@ to build the project. Once it has finished without error an executable called cy
 # NOTES
 
 CYTHAR is my first big project and i know that the code is not clean. But it's working :-).
-A complete refactoring is still in work -> branch refactoring .
+
+A rewrite and the following version you will find here: https://github.com/monotomy/cythar-online
 
 
-Any help is welcome!
+If you are interested to make some crasy things, any help is wellcome.
