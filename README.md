@@ -27,7 +27,7 @@ to build the project. Once it has finished without error an executable called cy
 
 The code is not clean and very crazy -> I tried out and learned many things. But it's working :-).
 
-A rewrite and the following version you will find here: https://github.com/monotomy/cythar-online
+A rewrite and also the following version you will find here: https://github.com/monotomy/cythar-online
 
 
 If you are interested to make some crazy things, any help is welcome.
