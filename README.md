@@ -7,7 +7,7 @@ web: www.cythar.sequenzer.org
 
 # LICENSE
 
-This software are licensed under the GNU GPL version 3. See the file COPYING for details.
+This software is licensed under the GNU GPL version 3. See the file COPYING for details.
 
 # BUILDING
 
