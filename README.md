@@ -1,7 +1,9 @@
 # CYTHAR-Sequenzer
 
 A pattern-oriented, polyphonic MIDI step-sequencer, which makes its own path.
-web: www.cythar.monoplugs.com
+
+forum: http://forum.monoplugs.com
+web: http://cythar.monoplugs.com
 
 
 
