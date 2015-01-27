@@ -1,6 +1,8 @@
 # CYTHAR-Sequenzer
 
-A pattern-oriented, polyphonic MIDI step-sequencer.
+A pattern-oriented, polyphonic MIDI step-sequencer. 
+
+In action videos: https://www.youtube.com/watch?v=0UK7US2NwC0&list=PLZCmwv5U3kDP-3jldIzOErbnBOdGjJV_M
 
 # LICENSE
 
